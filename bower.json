@@ -1,0 +1,16 @@
+{
+  "name": "rokkan-talks-grunt",
+  "version": "0.1.0",
+  "dependencies": {
+    "jquery": "2.0.3",
+    "bespoke.js": "0.2.2",
+    "bespoke-hash": "0.1.1",
+    "bespoke-state": "0.2.1",
+    "bespoke-loop": "0.1.1",
+    "bespoke-spotlight": "https://github.com/mobz/bespoke-spotlight.git",
+    "normalize-scss": "2.1.2"
+  },
+  "resolutions": {
+    "bespoke.js": "0.2.1"
+  }
+}
