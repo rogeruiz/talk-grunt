@@ -2,19 +2,29 @@ module.exports = function (grunt) {
 
     // Configure Grunt...
     grunt.config.init({
-        pkg: grunt.file.readJSON('package.json'),
         watch: {
-            scripts: {
-                files: ['js/lib/*.js', 'js/src/*.js'],
-                tasks: ['requirejs:dev']
-            },
             stylesheets: {
-                files: ['scss/lib/*.scss', 'scss/src/*.scss'],
+                files: ['scss/**/*.scss'],
                 tasks: ['compass:dev']
             },
-            markdown: {
+            docs: {
                 files: ['*.md', 'docs/src/*.md'],
                 tasks: ['markdown']
+            }
+        },
+        requirejs: {
+            options: {
+                baseUrl: 'js/lib',
+                mainConfigFile: 'js/src/config.js',
+                path: {
+                    'src': '../src'
+                },
+                out: 'js/app.js'
+            },
+            dev: {
+                options: {
+                    optimize: 'none'
+                }
             }
         },
         imagemin: {
@@ -28,13 +38,13 @@ module.exports = function (grunt) {
                     src: ['*.png'],
                     dest: 'img',
                     ext: '.png'
-                },{
+                }, {
                     expand: true,
                     cwd: 'img',
                     src: ['*.jpg'],
                     dest: 'img',
                     ext: '.jpg'
-                },{
+                }, {
                     expand: true,
                     cwd: 'img',
                     src: ['*.jpeg'],
@@ -45,7 +55,11 @@ module.exports = function (grunt) {
         },
         compass: {
             options: {
-                basePath: '/',
+                basePath: './',
+                sassDir: 'scss',
+                cssDir: 'css',
+                imagesDir: 'img',
+                javascriptsDir: 'js',
                 sassPath: 'scss',
                 cssPath: 'css',
                 imagesPath: 'img',
@@ -99,14 +113,14 @@ module.exports = function (grunt) {
     });
 
     // Load Grunt plugins...
-    grunt.loadNpmTasks('grunt-exec');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-compass');
-    grunt.loadNpmTasks('grunt-contrib-qunit');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
-    grunt.loadNpmTasks('grunt-markdown');
+    grunt.task.loadNpmTasks('grunt-exec');
+    grunt.task.loadNpmTasks('grunt-contrib-watch');
+    grunt.task.loadNpmTasks('grunt-contrib-compass');
+    grunt.task.loadNpmTasks('grunt-contrib-requirejs');
+    grunt.task.loadNpmTasks('grunt-contrib-qunit');
+    grunt.task.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.task.loadNpmTasks('grunt-markdown');
 
     // Register Grunt tasks...
-    grunt.task.registerTask('default', ['markdown']);
-    grunt.task.registerTask('docs', ['markdown']);
+    grunt.task.registerTask('default', ['watch']);
 };
