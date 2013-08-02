@@ -9,7 +9,7 @@
 		<h2>A Rokkan Talk about Grunt</h2>
 <h5>Grunt is a Javascript task runner</h5>
 <p>Quit running your tasks manually and have Grunt run them for you.</p>
-<p>More information on <a href="http://grunt.js.com">Grunt</a></p>
+<p>More information on <a href="http://grunt.js.com/">Grunt</a></p>
 <hr>
 <h3>Outline</h3>
 <h5>Introduction</h5>
@@ -23,8 +23,8 @@ break on the server or in the browser.</p>
 a forked list of things that need to be constantly running in the background in
 order to compile our code for the browser. We write out our <code>readme</code> files in
 Markdown but never bother compiling them to HTML to serve them up in the browser.
-We know we should be  compressing and minifying our image, js, and css assets,
-but if there is a deadline we&#39;re often leaving that to the last minute if we get
+We know we should be compressing and minifying our image, js, and css assets.
+But if there is a deadline, we&#39;re often leaving that to the last minute if we get
 a chance to do it at all.</p>
 <p><em>Tools are great.</em> <strong>But, tools are also a hassle.</strong></p>
 <ul>
@@ -37,7 +37,7 @@ a chance to do it at all.</p>
 <li>Building out assets for easier delivery to clients or production servers.</li>
 </ul>
 <p>How do we deal with our current workflow, the workflow of the future, and getting
-new developers up to speed with our workflow?</p>
+new developers up to speed with our present and future workflows?</p>
 <h5>What is Grunt?</h5>
 <p>Enter Grunt.</p>
 <p>Grunt is a javascript task runner built on top of Node.</p>
@@ -45,18 +45,317 @@ new developers up to speed with our workflow?</p>
 <p>Why use a task runner? In one word: automation. The less work you have to do when
 performing repetitive tasks like minification, compilation, unit testing, linting,
 etc, the easier your job becomes. After you&#39;ve configured it, a task running can
-do most of that mundane work for you—and your team—with basically zero effort. <a href="http://grunt.js.com">source</a></p>
+do most of that mundane work for you—and your team—with basically zero effort. <a href="http://grunt.js.com/">source</a></p>
+</blockquote>
+<p>It&#39;s a Node application. It runs what you want it to when you want it to. The
+configuration all happens in JSON, so it&#39;s easy to write and understand.
+Simple as that.</p>
+<blockquote>
 <p>Why use Grunt? The Grunt ecosystem is huge and it&#39;s growing every day. With literally
 hundreds of plugins to choose from, you can use Grunt to automate just about anything
 with a minimum of effort. If someone hasn&#39;t already built what you need, authoring
-and publishing your own Grunt plugin to npm is a breeze. <a href="http://grunt.js.com">source</a></p>
+and publishing your own Grunt plugin to npm is a breeze. <a href="http://grunt.js.com/">source</a></p>
 </blockquote>
-<p>It&#39;s a Node application. It runs what you want it to. Simple as that.</p>
 <h5>Setting up Grunt</h5>
-<h5>Popular Plugins</h5>
+<p>To use Grunt, we first need to install <a href="http://nodejs.org/">Nodejs</a>. You may already have it
+installed, but if not it&#39;s pretty simple to do.</p>
+<blockquote>
+<p>Download the Node.js source code or pre-built installer for your platform, and
+start developing today. <a href="http://nodejs.org/download/">source</a></p>
+</blockquote>
+<p>Once Node is up and running, the next is the <code>grunt-cli</code> in order to have the
+grunt command available anywhere.</p>
+<pre><code class="lang-shell"><span class="title">npm</span> install -g grunt-cli</code></pre>
+<p>You may need to run the console as Adminstrator on Windows or use <code>sudo</code> in the
+terminal on Mac.</p>
+<blockquote>
+<p>This will put the <code>grunt</code> in your system path, allowing it to be run from any directory.</p>
+<p>Note that installing <code>grunt-cli</code> does not install the grunt task runner! The job
+of the grunt CLI is simple: run the version of grunt which has been installed
+next to a <code>Gruntfile</code>. This allows multiple versions of grunt to be installed on
+the same machine simultaneously. <a href="http://grunt.js.com/getting-started">source</a></p>
+</blockquote>
+<p>With those two dependencies out of the way, you&#39;re ready to start using Grunt.
+If you&#39;d like to learn more about using Grunt and setting up a project, please
+read the <a href="http://grunt.js.com/getting-started">Getting Started</a> guide.</p>
+<p>First, install the projects dependencies. In this case, it&#39;s Grunt and the
+particular Grunt plugins you want to use.</p>
+<pre><code class="lang-shell"><span class="title">npm</span> install</code></pre>
+<p>This will install all the dependencies listed in the project&#39;s <code>package.json</code>
+file. More information about this file can be found <a href="https://gist.github.com/rogeruiz/6140992#file-package-json">here</a>.</p>
+<p>Once those are installed, you can start using Grunt with all the configurations
+specified in the <a href="https://gist.github.com/rogeruiz/6140992#file-gruntfile-js">Gruntfile.js</a> file.</p>
+<pre><code class="lang-shell"><span class="attribute">grunt</code></pre>
+<h5>Working into the Rokkan workflow</h5>
+<p>The best part of using Grunt is the community support behind it. There are tons
+of plugins that have already been contributed to the project. Most of them are
+interfaces for tools we already use:</p>
+<ul>
+<li><a href="https://npmjs.org/package/grunt-contrib-compass">Compass</a></li>
+<li><a href="https://npmjs.org/package/grunt-contrib-watch">Watch</a></li>
+<li><a href="https://github.com/treasonx/grunt-markdown">Markdown</a></li>
+<li><a href="https://npmjs.org/package/grunt-contrib-imagemin">Imagemin</a></li>
+<li><a href="https://npmjs.org/package/grunt-contrib-jshint">JSHint</a></li>
+<li><a href="https://npmjs.org/package/grunt-contrib-concat">Concat</a></li>
+<li><a href="https://npmjs.org/package/grunt-contrib-uglify">Uglify</a></li>
+<li><a href="http://gruntjs.com/plugins">A lot more</a></li>
+</ul>
+<p>These tools do what you already know them to do. And are pretty simple to set up
+within a <code>Gruntfile.js</code>.</p>
+<p>Here&#39;s Compass for example:</p>
+<pre><code class="lang-js">// <span class="keyword">...</span>
+compass: {
+  options: {
+    basePath: <span class="string">'/'</span>,
+    sassPath: <span class="string">'scss'</span>,
+    cssPath: <span class="string">'css'</span>,
+    imagesPath: <span class="string">'img'</span>,
+    javascriptsPath: <span class="string">'js'</span>,
+    noLineComments: false,
+    force: true
+  },
+  dist: {
+    options: {
+      outputStyle: <span class="string">'compressed'</span>,
+      environment: <span class="string">'production'</span>
+    }
+  },
+  dev: {
+    options: {
+      outputStyle: <span class="string">'expanded'</span>,
+      environment: <span class="string">'development'</span>
+    }
+  }
+}
+// <span class="keyword">...</span></code></pre>
+<p>Once that&#39;s set up, the Grunt commands for using them are exposed in the command
+line as:</p>
+<pre><code class="lang-shell"><span class="title">grunt</span> compass:dist</code></pre>
+<p>or</p>
+<pre><code class="lang-shell"><span class="title">grunt</span> compass:dev</code></pre>
 <h5>How Rokkan uses Grunt</h5>
-<h5>Proposed plugins</h5>
+<p>Dominic, Dan, and myself have been using Grunt. It&#39;s help use do just about everything
+we&#39;ve needed to do within a project. Compass compilation, documentation creation,
+minifying js, concating it, and setting up deploy folders.</p>
+<p>Here&#39;s a look at the Gruntfile.js for each project:</p>
+<h6>Rokkan-MainWebsite2013</h6>
+<p>Available tasks: <code>grunt uglify</code> </p>
+<pre><code class="lang-js"><span class="tag">grunt</span><span class="class">.initConfig</span>(<span class="rules">{
+  <span class="rule"><span class="attribute">uglify</span>:<span class="value"> {
+    my_target: {
+      files: {
+        <span class="string">'js/build/script.js'</span>: [<span class="string">'js/script.js'</span>],
+        <span class="string">'js/build/plugins.js'</span>: [<span class="string">'js/plugins.js'</span>]
+      }</span></span></span>
+    }
+  }
+});</code></pre>
+<h6>Stoli-OrgnlTv</h6>
+<p>Available tasks: <code>grunt compass</code>, <code>grunt uglify</code>, or <code>grunt watch</code></p>
+<pre><code class="lang-js">grunt.initConfig({
+  <span class="method">compass:</span> {
+    <span class="method">dev:</span> {
+      <span class="method">options:</span> {
+        <span class="method">config:</span> <span class="string">'config.rb'</span>,
+        <span class="method">force:</span> <span class="keyword">true</span>
+      }
+    }
+  },
+  <span class="method">uglify:</span> {
+    <span class="method">my_target:</span> {
+      <span class="method">files:</span> [ {
+        <span class="method">src:</span> [<span class="string">'assets/js/site/plugins.js'</span>, <span class="string">'assets/js/site/main.js'</span>],
+        <span class="method">dest:</span> <span class="string">'assets/js/site/main.min.js'</span>
+      } ]
+    }
+  },
+  <span class="method">watch:</span> {
+    <span class="method">sass:</span> {
+      <span class="method">files:</span> [<span class="string">'assets/sass/**/*.scss'</span>],
+      <span class="method">tasks:</span> [<span class="string">'compass:dev'</span>]
+    },
+    /* watch and see if our javascript files change, or new packages are installed */
+    <span class="method">js:</span> {
+      <span class="method">files:</span> [<span class="string">'assets/js/site/*.js'</span>],
+      <span class="method">tasks:</span> [<span class="string">'uglify'</span>, <span class="string">'uglify:my_target'</span>]
+    },
+    /* watch our files for change, reload */
+    <span class="method">livereload:</span> {
+      <span class="method">files:</span> [<span class="string">'*.html'</span>, <span class="string">'assets/css/site/*.css'</span>, <span class="string">'assets/images/*'</span>, <span class="string">'assets/js/site/main.min.js'</span>],
+      <span class="method">options:</span> {
+        <span class="method">livereload:</span> <span class="keyword">true</span>
+      }
+    }
+  }
+});</code></pre>
+<h6>WellPoint-RealHealthSite</h6>
+<p>Available tasks: <code>grunt watch</code>, <code>grunt qunit</code>, <code>grunt phpunit</code>, <code>grunt requirejs:dev</code>,
+<code>grunt requirejs:dist</code>, <code>grunt imagemin</code>, <code>grunt compass:dev</code>, <code>grunt compass:dist</code>,
+<code>grunt markdown</code> or <code>grunt jshint</code></p>
+<pre><code class="lang-js">grunt.config.init({
+  <span class="method">pkg:</span> grunt.file.readJSON(<span class="string">'package.json'</span>),
+  <span class="method">qunit:</span> {
+    <span class="method">all:</span> [<span class="string">'tests/*.html'</span>]
+  },
+  <span class="method">exec:</span> {
+    <span class="method">phpunit:</span> {
+      <span class="method">cmd:</span> <span class="string">'phpunit tests'</span>
+    }
+  },
+  <span class="method">watch:</span> {
+    <span class="method">scripts:</span> {
+      <span class="method">files:</span> [<span class="string">'web/js/lib/*.js'</span>, <span class="string">'web/js/src/*.js'</span>],
+      <span class="method">tasks:</span> [<span class="string">'requirejs:dev'</span>]
+    },
+    <span class="method">stylesheets:</span> {
+      <span class="method">files:</span> [<span class="string">'web/scss/lib/*.scss'</span>, <span class="string">'web/scss/src/*.scss'</span>],
+      <span class="method">tasks:</span> [<span class="string">'compass:dev'</span>]
+    },
+    <span class="method">docs:</span> {
+      <span class="method">files:</span> [<span class="string">'*.markdown'</span>, <span class="string">'docs/src/*.markdown'</span>],
+      <span class="method">tasks:</span> [<span class="string">'markdown'</span>]
+    },
+    <span class="method">qunit:</span> {
+      <span class="method">files:</span> [<span class="string">'tests/**/*.html'</span>, <span class="string">'tests/**/*.js'</span>, <span class="string">'web/src/app.js'</span>],
+      <span class="method">tasks:</span> [<span class="string">'qunit'</span>]
+    },
+    <span class="method">phpunit:</span> {
+      <span class="method">files:</span> [<span class="string">'tests/**/*.php'</span>],
+      <span class="method">tasks:</span> [<span class="string">'exec:phpunit'</span>]
+    }
+  },
+  <span class="method">requirejs:</span> {
+    <span class="method">dist:</span> {
+      <span class="method">options:</span> {
+        <span class="method">baseUrl:</span> <span class="comment">"web/js"</span>,
+        <span class="method">name:</span> <span class="comment">"src/main"</span>,
+        <span class="method">paths:</span> {
+          <span class="comment">"src"</span>: <span class="comment">"src"</span>,
+          <span class="comment">"jquery"</span>: <span class="comment">"lib/jquery"</span>
+        },
+        <span class="method">out:</span> <span class="comment">"web/js/app.js"</span>,
+        <span class="method">optimize:</span> <span class="string">'uglify2'</span>,
+        <span class="method">preserveLicenseComments:</span> <span class="keyword">false</span>,
+        <span class="method">generateSourceMaps:</span> <span class="keyword">true</span>,
+        <span class="method">compress:</span> {
+          <span class="method">dead_code:</span> <span class="keyword">true</span>,
+          <span class="method">unused:</span> <span class="keyword">true</span>
+        }
+      }
+    },
+    <span class="method">dev:</span> {
+      <span class="method">options:</span> {
+        <span class="method">baseUrl:</span> <span class="comment">"web/js"</span>,
+        <span class="method">name:</span> <span class="comment">"src/main"</span>,
+        <span class="method">paths:</span> {
+          <span class="comment">"src"</span>: <span class="comment">"src"</span>,
+          <span class="comment">"jquery"</span>: <span class="comment">"lib/jquery"</span>
+        },
+        <span class="method">out:</span> <span class="comment">"web/js/app.js"</span>,
+        <span class="method">optimize:</span> <span class="string">'none'</span>
+      }
+    }
+  },
+  <span class="method">imagemin:</span> {
+    <span class="method">dist:</span> {
+      <span class="method">options:</span> {
+        <span class="method">optimizationLevel:</span> <span class="number">3</span>
+      },
+      <span class="method">files:</span> [{
+        <span class="method">expand:</span> <span class="keyword">true</span>,
+        <span class="method">cwd:</span> <span class="string">'web/img'</span>,
+        <span class="method">src:</span> [<span class="string">'*.png'</span>],
+        <span class="method">dest:</span> <span class="string">'web/img'</span>,
+        <span class="method">ext:</span> <span class="string">'.png'</span>
+      },{
+        <span class="method">expand:</span> <span class="keyword">true</span>,
+        <span class="method">cwd:</span> <span class="string">'web/img'</span>,
+        <span class="method">src:</span> [<span class="string">'*.jpg'</span>],
+        <span class="method">dest:</span> <span class="string">'web/img'</span>,
+        <span class="method">ext:</span> <span class="string">'.jpg'</span>
+      },{
+        <span class="method">expand:</span> <span class="keyword">true</span>,
+        <span class="method">cwd:</span> <span class="string">'web/img'</span>,
+        <span class="method">src:</span> [<span class="string">'*.jpeg'</span>],
+        <span class="method">dest:</span> <span class="string">'web/img'</span>,
+        <span class="method">ext:</span> <span class="string">'.jpeg'</span>
+      }]
+    }
+  },
+  <span class="method">compass:</span> {
+    <span class="method">dist:</span> {
+      <span class="method">options:</span> {
+        <span class="method">config:</span> <span class="string">'config/compass.rb'</span>,
+        <span class="method">outputStyle:</span> <span class="string">'compressed'</span>,
+        <span class="method">noLineComments:</span> <span class="keyword">true</span>,
+        <span class="method">environment:</span> <span class="string">'production'</span>
+      }
+    },
+    <span class="method">dev:</span> {
+      <span class="method">options:</span> {
+        <span class="method">config:</span> <span class="string">'config/compass.rb'</span>,
+        <span class="method">outputStyle:</span> <span class="string">'expanded'</span>,
+        <span class="method">noLineComments:</span> <span class="keyword">false</span>,
+        <span class="method">environment:</span> <span class="string">'development'</span>
+      }
+    }
+  },
+  <span class="method">markdown:</span> {
+    <span class="method">docs:</span> {
+      <span class="method">files:</span> [
+        {
+          <span class="method">expand:</span> <span class="keyword">true</span>,
+          <span class="method">cwd:</span> <span class="string">'docs/src'</span>,
+          <span class="method">src:</span> [<span class="string">'*.markdown'</span>],
+          <span class="method">dest:</span> <span class="string">'docs'</span>,
+          <span class="method">ext:</span> <span class="string">'.html'</span>
+        }
+      ],
+      <span class="method">options:</span> {
+        <span class="method">template:</span> <span class="string">'docs/src/article.markdown.jst'</span>,
+        <span class="method">markdownOptions:</span> {
+          <span class="method">gfm:</span> <span class="keyword">true</span>,
+          <span class="method">highlight:</span> <span class="string">'manual'</span>
+        }
+      }
+    },
+    <span class="method">readme:</span> {
+      <span class="method">files:</span> {
+        <span class="string">'docs/index.html'</span>: [<span class="string">'README.markdown'</span>]
+      },
+      <span class="method">options:</span> {
+        <span class="method">template:</span> <span class="string">'docs/src/index.markdown.jst'</span>,
+        <span class="method">markdownOptions:</span> {
+          <span class="method">gfm:</span> <span class="keyword">true</span>,
+          <span class="method">highlight:</span> <span class="string">'manual'</span>
+        }
+      }
+    }
+  },
+  <span class="method">jshint:</span> {
+    <span class="method">files:</span> [<span class="string">'Gruntfile.js'</span>, <span class="string">'web/js/src/*.js'</span>, <span class="string">'tests/tests.js'</span>],
+    <span class="method">options:</span> {
+      <span class="method">ignores:</span> [<span class="string">'web/js/lib/*.js'</span>, <span class="string">'web/js/app.js'</span>]
+    }
+  }
+});</code></pre>
+<h5>Endless possibilities</h5>
+<p>Wouldn&#39;t it be great if you could update your workflow with new tools easily?
+Using Grunt you can do just that. Next time you see a new tool come out that
+you&#39;d like to try on a project, you can just add it to your <code>Gruntfile.js</code> and
+give it a try. No headaches, no problems.</p>
+<p>Find out that you need to minify things and copy files everytime you update something?
+Grunt can easily be configured to do that.</p>
+<p>Check out the <a href="http://gruntjs.com/plugins">plugins page</a> for all of the ways you
+can add new functionality to Grunt. There are already a ton of plugins there.</p>
+<p>There is also a <code>grunt-init</code> scaffolding tool used to automate project creation.
+A tool like this can be built for every different type of Rokkan project, present
+and future, and standardize and minimize our startup process. More information
+about this tool can be found <a href="http://gruntjs.com/project-scaffolding">here</a>.</p>
 <h5>Thanks</h5>
+<p>So that&#39;s the basics for using Grunt with some opinionated workflow suggestions.
+We have a few developers already using Grunt in various ways. Feel free to ask
+them to go more in-depth about their workflow. Thanks!</p>
 
 		<hr>
 		<p>(c) <a href="http://rokkan.com">Rokkan</a> 2013</p>
