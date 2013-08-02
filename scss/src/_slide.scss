@@ -1,3 +1,75 @@
-* {
-    box-sizing: border-box;
+section {
+    background-color: $rkn-black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    @include transition(all .25s ease-in);
+    > .inner {
+        z-index: 10;
+        position: relative;
+        width: 50%;
+        margin: 0 auto;
+        vertical-align: middle;
+    }
+}
+
+.bespoke-slide {
+    overflow: hidden;
+}
+
+.gif-bg {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 20%;
+    background-size: cover;
+    background-repeat: repeat-x;
+    background-position: 50% 50%;
+    @include filter(brightness(0.25));
+    @include transform-origin(top, left);
+    @include transform(scale(5));
+}
+
+
+.gif-bg {
+    &.drip {
+        background-image: image-url('drip.gif');
+    }
+    &.no_time {
+        padding: 250px 250px 250px 350px;
+        background-image: image-url('no_time.gif');
+        @include filter(brightness(1));
+        @include transform(scale(3));
+    }
+    &.moving_parts {
+        background-image: image-url('moving_parts.gif');
+    }
+    &.magic_kitty {
+        background-image: image-url('magic_kitty.gif');
+    }
+    &.fear_of_change {
+        background-image: image-url('fear_of_change.gif');
+    }
+    &.loading {
+        background-image: image-url('loading.gif');
+    }
+    &.hipster {
+        background-image: image-url('hipster.gif');
+    }
+    &.enter_the_matrix {
+        background-image: image-url('enter_the_matrix.gif');
+    }
+    &.thanks {
+        background-image: image-url('thanks.gif');
+        width: 100%;
+        height: 100%;
+        @include transform(scale(1));
+        @include filter(brightness(1));
+    }
 }
