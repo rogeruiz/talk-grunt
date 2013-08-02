@@ -228,6 +228,14 @@ grunt.initConfig({
 });
 ```
 
+###### Evil Within
+Available tasks: `grunt uglify`, `grunt copy`, or `grunt compass`
+```js
+  grunt.config.init({
+    //... Grab it from the Lamp Repo
+});
+```
+
 ###### WellPoint-RealHealthSite
 Available tasks: `grunt watch`, `grunt qunit`, `grunt phpunit`, `grunt requirejs:dev`,
 `grunt requirejs:dist`, `grunt imagemin`, `grunt compass:dev`, `grunt compass:dist`,
