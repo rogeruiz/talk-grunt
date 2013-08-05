@@ -1,7 +1,6 @@
 .bespoke-parent {}
 .bespoke-slide {
     overflow: hidden;
-    // @include transform-origin(50%, 50%, -50%);
     > .inner {
         @include transform-origin(50%, 50%, -50%);
     }
@@ -21,15 +20,13 @@
 }
 
 .bespoke-before {
-    // @include transform(rotateX(-90deg));
     > .inner {
-        @include transform(rotateX(-90deg));
+        @include transform(rotateY(-180deg));
     }
 }
 
 .bespoke-after {
-    // @include transform(rotateX(90deg));
     > .inner {
-        @include transform(rotateX(90deg));
+        @include transform(rotateY(180deg));
     }
 }

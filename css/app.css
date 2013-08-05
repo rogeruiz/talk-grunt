@@ -438,7 +438,7 @@ pre code {
   padding: 0.5em;
   color: #333;
   background: #f8f8ff;
-  font-size: 12px;
+  font-size: 18px;
 }
 
 /* line 18, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
@@ -585,29 +585,25 @@ html, body {
   background-color: #171614;
   color: #fff;
   font-family: 'Gentium Book Basic', serif;
+  font-size: 24px;
 }
 
-/* line 11, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
+/* line 12, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
 h1, h2 {
   font-family: 'Open Sans', sans-serif;
 }
 
-/* line 15, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
-p {
-  font-size: 18px;
-}
-
-/* line 19, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
+/* line 17, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
 a {
   color: #f1f1f1;
 }
-/* line 21, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
+/* line 19, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
 a:hover {
   color: #ffffff;
   text-decoration: none;
 }
 
-/* line 27, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
+/* line 25, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
 .logo {
   display: block;
   width: 150px;
@@ -632,20 +628,20 @@ a:hover {
   -o-transform-origin: center center;
   transform-origin: center center;
 }
-/* line 37, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
+/* line 35, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
 .logo.rokkan {
   background: white url('/img/logo-rokkan.png?1375467938') 50% 45% no-repeat;
 }
-/* line 40, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
+/* line 38, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
 .logo.grunt {
   background: white url('/img/logo-grunt.png?1375738873') 50% 50% no-repeat;
 }
-/* line 43, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
+/* line 41, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
 .logo.roger {
   background: white url('/img/splash-roger.png?1375738795') 50% 50% no-repeat;
 }
 
-/* line 48, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
+/* line 46, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
 .logo-wrapper {
   position: relative;
   width: 25%;
@@ -697,13 +693,8 @@ section.tools-are-a-hassle {
 }
 /* line 21, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
 section.tools-are-a-hassle > .inner {
-  background-color: rgba(225, 225, 225, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
   color: #171614;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
-  border-radius: 20px;
 }
 
 /* line 29, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
@@ -847,7 +838,7 @@ header .micro {
 .bespoke-slide {
   overflow: hidden;
 }
-/* line 5, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_transition.scss */
+/* line 4, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_transition.scss */
 .bespoke-slide > .inner {
   -webkit-transform-origin: 50% 50% -50%;
   -moz-transform-origin: 50% 50% -50%;
@@ -856,7 +847,7 @@ header .micro {
   transform-origin: 50% 50% -50%;
 }
 
-/* line 9, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_transition.scss */
+/* line 8, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_transition.scss */
 .bespoke-active {
   opacity: 1;
   -webkit-transition: all 0.8s ease;
@@ -864,7 +855,7 @@ header .micro {
   -o-transition: all 0.8s ease;
   transition: all 0.8s ease;
 }
-/* line 12, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_transition.scss */
+/* line 11, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_transition.scss */
 .bespoke-active > .inner {
   opacity: 1;
   -webkit-transition: all 1.5s ease;
@@ -873,25 +864,25 @@ header .micro {
   transition: all 1.5s ease;
 }
 
-/* line 18, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_transition.scss */
+/* line 17, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_transition.scss */
 .bespoke-inactive > .inner {
   opacity: 0;
 }
 
-/* line 25, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_transition.scss */
+/* line 23, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_transition.scss */
 .bespoke-before > .inner {
-  -webkit-transform: rotateX(-90deg);
-  -moz-transform: rotateX(-90deg);
-  -ms-transform: rotateX(-90deg);
-  -o-transform: rotateX(-90deg);
-  transform: rotateX(-90deg);
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
 }
 
-/* line 32, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_transition.scss */
+/* line 29, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_transition.scss */
 .bespoke-after > .inner {
-  -webkit-transform: rotateX(90deg);
-  -moz-transform: rotateX(90deg);
-  -ms-transform: rotateX(90deg);
-  -o-transform: rotateX(90deg);
-  transform: rotateX(90deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }

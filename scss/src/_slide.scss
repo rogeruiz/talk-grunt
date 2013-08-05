@@ -19,9 +19,9 @@ section {
     &.tools-are-a-hassle {
         background-color: #fff;
         > .inner {
-            background-color: rgba(225,225,225,.5);
+            background-color: rgba(255,255,255,.8);
             color: $rkn-black;
-            @include border-radius(20px);
+            // @include border-radius(20px);
         }
     }
 }

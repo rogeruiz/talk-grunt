@@ -56,7 +56,7 @@
                 <div class="gif-bg fear_of_change"></div>
                 <div class="inner">
                     <header>
-                        <h2 class="slide-title">Change <span>can be</span> impractical</h2>
+                        <h2 class="slide-title">Tools <span>can be</span> impractical</h2>
                     </header>
                     <p>There are issues with having this many tools, though. We spend so much time running a forked list of things that need to be constantly running in the background in order to compile our code for the browser. We write out our <code>readme</code> files in Markdown but never bother compiling them to HTML to serve them up in the browser. We know we should be compressing and minifying our image, js, and css assets. But if there is a deadline, we&#39;re often leaving that to the last minute if we get a chance to do it at all.</p>
                 </div> <!-- /.inner -->
@@ -146,7 +146,7 @@
                     <pre><code class="lang-shell"><span class="title">npm</span> install</code></pre>
                     <p>This will install all the dependencies listed in the project&#39;s <code>package.json</code> file. More information about this file can be found <a href="https://gist.github.com/rogeruiz/6140992#file-package-json" target="_blank">here</a>.</p>
                     <p>Once those are installed, you can start using Grunt with all the configurations specified in the <a href="https://gist.github.com/rogeruiz/6140992#file-gruntfile-js" target="_blank">Gruntfile.js</a> file.</p>
-                    <pre><code class="lang-shell"><span class="attribute">grunt --help</code></pre>
+                    <pre><code class="lang-shell"><span class="attribute">grunt --help </code></pre>
                 </div>
             </section>
             <section class="rokkan-workflow">
@@ -161,15 +161,12 @@
                     <p>The best part of using Grunt is the community support behind it. There are tons of plugins that have already been contributed to the project. Most of them are interfaces for tools we already use:</p>
                     <ul>
                         <li><a href="https://npmjs.org/package/grunt-contrib-compass" target="_blank">Compass</a></li>
-                        <li><a href="https://npmjs.org/package/grunt-contrib-watch" target="_blank">Watch</a></li>
-                        <li><a href="https://github.com/treasonx/grunt-markdown" target="_blank">Markdown</a></li>
                         <li><a href="https://npmjs.org/package/grunt-contrib-imagemin" target="_blank">Imagemin</a></li>
                         <li><a href="https://npmjs.org/package/grunt-contrib-jshint" target="_blank">JSHint</a></li>
-                        <li><a href="https://npmjs.org/package/grunt-contrib-concat" target="_blank">Concat</a></li>
                         <li><a href="https://npmjs.org/package/grunt-contrib-uglify" target="_blank">Uglify</a></li>
                         <li><a href="http://gruntjs.com/plugins" target="_blank">A lot more</a></li>
                     </ul>
-                    <p>These tools do what you already know them to do. And are pretty simple to set up within a <code>Gruntfile.js</code>.</p>
+                    <!-- <p>These tools do what you already know them to do. And are pretty simple to set up within a <code>Gruntfile.js</code>.</p> -->
                     <p>Here&#39;s Compass for example:</p>
 <pre><code class="lang-js">// <span class="keyword">...</span>
 compass: {
@@ -184,14 +181,12 @@ compass: {
   },
   dist: {
     options: {
-      outputStyle: <span class="string">'compressed'</span>,
-      environment: <span class="string">'production'</span>
+      outputStyle: <span class="string">'compressed'</span>
     }
   },
   dev: {
     options: {
-      outputStyle: <span class="string">'expanded'</span>,
-      environment: <span class="string">'development'</span>
+      outputStyle: <span class="string">'expanded'</span>
     }
   }
 }
