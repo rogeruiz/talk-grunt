@@ -1,8 +1,10 @@
 .bespoke-parent {}
 .bespoke-slide {
+    overflow: hidden;
     @include transform-origin(50%, 50%, -50%);
 }
 .bespoke-active {
+    opacity: 1;
     @include transition(all .8s ease);
 }
 .bespoke-inactive {

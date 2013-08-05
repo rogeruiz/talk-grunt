@@ -1,4 +1,5 @@
 section {
+    opacity: 0;
     background-color: $rkn-black;
     position: absolute;
     top: 0;
@@ -12,13 +13,19 @@ section {
         z-index: 10;
         position: relative;
         width: 50%;
+        padding: 30px;
         margin: 0 auto;
         vertical-align: middle;
+        overflow: scroll;
     }
-}
-
-.bespoke-slide {
-    overflow: hidden;
+    &.tools-are-a-hassle {
+        background-color: #fff;
+        > .inner {
+            background-color: rgba(225,225,225,.5);
+            color: $rkn-black;
+            @include border-radius(20px);
+        }
+    }
 }
 
 .gif-bg {
@@ -34,11 +41,8 @@ section {
     @include filter(brightness(0.25));
     @include transform-origin(top, left);
     @include transform(scale(5));
-}
-
-
-.gif-bg {
     &.drip {
+        @include filter(brightness(1));
         background-image: image-url('drip.gif');
     }
     &.no_time {
@@ -79,5 +83,47 @@ section {
         height: 100%;
         @include transform(scale(1));
         @include filter(brightness(1));
+    }
+}
+
+
+.heading-wrapper,
+header {
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    span {
+        font-family: 'Gentium Book Basic', serif;
+        font-style: italic;
+        text-transform: none;
+        display: block;
+        // margin-top: 10px;
+        margin-bottom: 0;
+        &:before, &:after {
+            font-style: normal;
+            content: '—';
+            padding: 15px;
+        }
+    }
+    // .ascender {
+    //     margin-top: 6px;
+    //     margin-bottom: 0;
+    // }
+    // .descender {
+    //     margin-top: 10px;
+    //     margin-bottom: 5px;
+    // }
+    .micro {
+        font-size: .45em;
+    }
+}
+
+.conclusion {
+    .logo-wrapper {
+        height: 500px;
+        .roger {
+            margin-top: 40px;
+            margin-left: -7px;
+        }
     }
 }
