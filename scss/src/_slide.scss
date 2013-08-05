@@ -50,6 +50,9 @@ section {
     &.moving_parts {
         background-image: image-url('moving_parts.gif');
     }
+    &.moving_parts_too {
+        background-image: image-url('moving_parts_too.gif');
+    }
     &.magic_kitty {
         background-image: image-url('magic_kitty.gif');
     }
@@ -59,8 +62,13 @@ section {
     &.loading {
         background-image: image-url('loading.gif');
     }
+    &.grunt_task {
+        background-image: image-url('grunt_task.gif');
+        @include filter(brightness(0.35));
+    }
     &.hipster {
         background-image: image-url('hipster.gif');
+        @include filter(brightness(0.75));
     }
     &.enter_the_matrix {
         background-image: image-url('enter_the_matrix.gif');

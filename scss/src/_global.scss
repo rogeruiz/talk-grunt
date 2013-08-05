@@ -17,40 +17,43 @@ p {
 }
 
 .logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: white image-url('rokkan-logo.png') 50% 45% no-repeat;
-    width: 125px;
-    height: 125px;
-    margin: 0;
+    display: block;
+    margin: 0 auto;
     border: 1px solid $rkn-black;
     @include hide-text();
-    // @include box-shadow(2px 2px 0 $rkn-black);
     @include border-radius(100px);
     @include transition(all .25s ease-in);
     @include transform-origin(center, center);
+    &.rokkan {
+        background: white image-url('logo-rokkan.png') 50% 45% no-repeat;
+        width: 125px;
+        height: 125px;
+    }
+    &.grunt {
+        background: white image-url('logo-grunt.png') 60% 45px no-repeat;
+        width: 400px;
+        height: 400px;
+        @include border-radius(200px);
+        @include transform(scale(.32));
+    }
+    &.roger {
+        background: white image-url('splash-roger.png') 50% 50% no-repeat;
+        width: 200px;
+        height: 200px;
+        @include transform(scale(.65));
+    }
 }
 
-.me {
-    position: absolute;
-    top: 100px;
-    left: -38px;
-    background: white image-url('splash-roger.png') 50% 50% no-repeat;
-    width: 200px;
-    height: 200px;
-    margin: 0;
-    border: 1px solid $rkn-black;
-    @include hide-text();
-    @include box-shadow(2px 2px 0 $rkn-black);
-    @include border-radius(100px);
-    @include transition(all .5s ease-in);
-    @include transform-origin(center, center);
-    @include transform(scale(.5) translateX(-200px) rotate(-45deg));
-}
-
-.bespoke-active {
-    .me {
-        @include transform(scale(.5) translateX(0) rotate(0));
+.logo-wrapper {
+    position: relative;
+    width: 25%;
+    margin: 0 auto;
+    @include cf();
+    .roger {
+        // margin-top: -36px;
+    }
+    .grunt {
+        margin-top: -130px;
+        margin-left: -102px;
     }
 }
