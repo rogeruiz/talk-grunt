@@ -1,28 +1,35 @@
 .bespoke-parent {}
 .bespoke-slide {
     overflow: hidden;
-    @include transform-origin(50%, 50%, -50%);
+    // @include transform-origin(50%, 50%, -50%);
+    > .inner {
+        @include transform-origin(50%, 50%, -50%);
+    }
 }
 .bespoke-active {
     opacity: 1;
     @include transition(all .8s ease);
+    > .inner {
+        opacity: 1;
+        @include transition(all 1.5s ease);
+    }
 }
 .bespoke-inactive {
-    // opacity: 0;
+    > .inner {
+        opacity: 0;
+    }
 }
-.bespoke-before {}
-.bespoke-before-1 {}
-.bespoke-before-2 {}
-.bespoke-before-3 {}
-.bespoke-after {}
-.bespoke-after-1 {}
-.bespoke-after-2 {}
-.bespoke-after-3 {}
 
 .bespoke-before {
-    @include transform(rotateX(-90deg));
+    // @include transform(rotateX(-90deg));
+    > .inner {
+        @include transform(rotateX(-90deg));
+    }
 }
 
 .bespoke-after {
-    @include transform(rotateX(90deg));
+    // @include transform(rotateX(90deg));
+    > .inner {
+        @include transform(rotateX(90deg));
+    }
 }

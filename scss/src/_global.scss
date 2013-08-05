@@ -16,8 +16,18 @@ p {
     font-size: 18px;
 }
 
+a {
+    color: #f1f1f1;
+    &:hover {
+        color: #ffffff;
+        text-decoration: none;
+    }
+}
+
 .logo {
     display: block;
+    width: 150px;
+    height: 150px;
     margin: 0 auto;
     border: 1px solid $rkn-black;
     @include hide-text();
@@ -26,21 +36,12 @@ p {
     @include transform-origin(center, center);
     &.rokkan {
         background: white image-url('logo-rokkan.png') 50% 45% no-repeat;
-        width: 125px;
-        height: 125px;
     }
     &.grunt {
-        background: white image-url('logo-grunt.png') 60% 45px no-repeat;
-        width: 400px;
-        height: 400px;
-        @include border-radius(200px);
-        @include transform(scale(.32));
+        background: white image-url('logo-grunt.png') 50% 50% no-repeat;
     }
     &.roger {
         background: white image-url('splash-roger.png') 50% 50% no-repeat;
-        width: 200px;
-        height: 200px;
-        @include transform(scale(.65));
     }
 }
 
@@ -49,11 +50,4 @@ p {
     width: 25%;
     margin: 0 auto;
     @include cf();
-    .roger {
-        // margin-top: -36px;
-    }
-    .grunt {
-        margin-top: -130px;
-        margin-left: -102px;
-    }
 }

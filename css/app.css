@@ -423,16 +423,25 @@ table {
   border-spacing: 0;
 }
 
+/* line 1, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+blockquote {
+  color: #e6e6e6;
+  margin: 0;
+  padding-left: 3em;
+  border-left: 0.5em #EEE solid;
+}
+
 /*github.com style (c) Vasily Polovnyov <vast@whiteants.net>*/
-/* line 2, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 9, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre code {
   display: block;
   padding: 0.5em;
   color: #333;
-  background: ghostwhite;
+  background: #f8f8ff;
+  font-size: 12px;
 }
 
-/* line 10, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 18, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .comment,
 pre .template_comment,
 pre .diff .header,
@@ -441,7 +450,7 @@ pre .javadoc {
   font-style: italic;
 }
 
-/* line 21, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 29, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .keyword,
 pre .css .rule .keyword,
 pre .winutils,
@@ -454,14 +463,14 @@ pre .status {
   font-weight: bold;
 }
 
-/* line 27, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 35, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .number,
 pre .hexcolor,
 pre .ruby .constant {
   color: #099;
 }
 
-/* line 33, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 41, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .string,
 pre .tag .value,
 pre .phpdoc,
@@ -469,14 +478,14 @@ pre .tex .formula {
   color: #dd1144;
 }
 
-/* line 37, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 45, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .title,
 pre .id {
   color: #900;
   font-weight: bold;
 }
 
-/* line 44, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 52, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .javascript .title,
 pre .lisp .title,
 pre .clojure .title,
@@ -484,7 +493,7 @@ pre .subst {
   font-weight: normal;
 }
 
-/* line 50, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 58, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .class .title,
 pre .haskell .type,
 pre .vhdl .literal,
@@ -493,7 +502,7 @@ pre .tex .command {
   font-weight: bold;
 }
 
-/* line 57, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 65, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .tag,
 pre .tag .title,
 pre .rules .property,
@@ -502,25 +511,25 @@ pre .django .tag .keyword {
   font-weight: normal;
 }
 
-/* line 63, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 71, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .attribute,
 pre .variable,
 pre .lisp .body {
   color: teal;
 }
 
-/* line 66, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 74, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .regexp {
   color: #009926;
 }
 
-/* line 69, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 77, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .class {
   color: #458;
   font-weight: bold;
 }
 
-/* line 77, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 85, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .symbol,
 pre .ruby .symbol .string,
 pre .lisp .keyword,
@@ -529,14 +538,14 @@ pre .prompt {
   color: #990073;
 }
 
-/* line 82, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 90, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .built_in,
 pre .lisp .title,
 pre .clojure .built_in {
   color: #0086b3;
 }
 
-/* line 89, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 97, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .preprocessor,
 pre .pi,
 pre .doctype,
@@ -546,22 +555,22 @@ pre .cdata {
   font-weight: bold;
 }
 
-/* line 93, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 101, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .deletion {
   background: #ffdddd;
 }
 
-/* line 96, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 104, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .addition {
   background: #ddffdd;
 }
 
-/* line 99, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 107, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .diff .change {
   background: #0086b3;
 }
 
-/* line 102, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 110, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .chunk {
   color: #aaaaaa;
 }
@@ -589,8 +598,20 @@ p {
 }
 
 /* line 19, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
+a {
+  color: #f1f1f1;
+}
+/* line 21, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
+a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* line 27, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
 .logo {
   display: block;
+  width: 150px;
+  height: 150px;
   margin: 0 auto;
   border: 1px solid #171614;
   text-indent: -119988px;
@@ -611,41 +632,20 @@ p {
   -o-transform-origin: center center;
   transform-origin: center center;
 }
-/* line 27, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
+/* line 37, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
 .logo.rokkan {
   background: white url('/img/logo-rokkan.png?1375467938') 50% 45% no-repeat;
-  width: 125px;
-  height: 125px;
 }
-/* line 32, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
+/* line 40, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
 .logo.grunt {
-  background: white url('/img/logo-grunt.png?1375384214') 60% 45px no-repeat;
-  width: 400px;
-  height: 400px;
-  -webkit-border-radius: 200px;
-  -moz-border-radius: 200px;
-  -ms-border-radius: 200px;
-  -o-border-radius: 200px;
-  border-radius: 200px;
-  -webkit-transform: scale(0.32);
-  -moz-transform: scale(0.32);
-  -ms-transform: scale(0.32);
-  -o-transform: scale(0.32);
-  transform: scale(0.32);
+  background: white url('/img/logo-grunt.png?1375738873') 50% 50% no-repeat;
 }
-/* line 39, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
+/* line 43, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
 .logo.roger {
-  background: white url('/img/splash-roger.png?1375468905') 50% 50% no-repeat;
-  width: 200px;
-  height: 200px;
-  -webkit-transform: scale(0.65);
-  -moz-transform: scale(0.65);
-  -ms-transform: scale(0.65);
-  -o-transform: scale(0.65);
-  transform: scale(0.65);
+  background: white url('/img/splash-roger.png?1375738795') 50% 50% no-repeat;
 }
 
-/* line 47, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
+/* line 48, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
 .logo-wrapper {
   position: relative;
   width: 25%;
@@ -665,11 +665,6 @@ p {
 /* line 5, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_mixins.scss */
 .logo-wrapper {
   zoom: 1;
-}
-/* line 55, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
-.logo-wrapper .grunt {
-  margin-top: -130px;
-  margin-left: -102px;
 }
 
 /* line 1, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
@@ -695,14 +690,12 @@ section > .inner {
   width: 50%;
   padding: 30px;
   margin: 0 auto;
-  vertical-align: middle;
-  overflow: scroll;
 }
-/* line 21, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 19, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
 section.tools-are-a-hassle {
   background-color: #fff;
 }
-/* line 23, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 21, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
 section.tools-are-a-hassle > .inner {
   background-color: rgba(225, 225, 225, 0.5);
   color: #171614;
@@ -713,7 +706,7 @@ section.tools-are-a-hassle > .inner {
   border-radius: 20px;
 }
 
-/* line 31, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 29, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
 .gif-bg {
   z-index: 0;
   position: absolute;
@@ -738,14 +731,14 @@ section.tools-are-a-hassle > .inner {
   -o-transform: scale(5);
   transform: scale(5);
 }
-/* line 44, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 42, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
 .gif-bg.drip {
   -webkit-filter: brightness(1);
   -moz-filter: brightness(1);
   filter: brightness(1);
   background-image: url('/img/drip.gif?1375372986');
 }
-/* line 48, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 46, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
 .gif-bg.no_time {
   padding: 250px 250px 250px 350px;
   background-image: url('/img/no_time.gif?1375382708');
@@ -758,45 +751,49 @@ section.tools-are-a-hassle > .inner {
   -o-transform: scale(3);
   transform: scale(3);
 }
-/* line 54, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 52, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
 .gif-bg.moving_parts {
   background-image: url('/img/moving_parts.gif?1375372984');
 }
-/* line 57, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 55, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
 .gif-bg.moving_parts_too {
   background-image: url('/img/moving_parts_too.gif?1375725921');
 }
-/* line 60, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 58, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
 .gif-bg.magic_kitty {
   background-image: url('/img/magic_kitty.gif?1375382652');
 }
-/* line 63, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 61, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
 .gif-bg.fear_of_change {
   background-image: url('/img/fear_of_change.gif?1375373854');
 }
-/* line 66, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 64, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+.gif-bg.future_tools {
+  background-image: url('/img/future_tools.gif?1375717876');
+}
+/* line 67, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
 .gif-bg.loading {
   background-image: url('/img/loading.gif?1375372981');
 }
-/* line 69, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 70, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
 .gif-bg.grunt_task {
   background-image: url('/img/grunt_task.gif?1375727633');
   -webkit-filter: brightness(0.35);
   -moz-filter: brightness(0.35);
   filter: brightness(0.35);
 }
-/* line 73, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 74, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
 .gif-bg.hipster {
   background-image: url('/img/hipster.gif?1375382636');
   -webkit-filter: brightness(0.75);
   -moz-filter: brightness(0.75);
   filter: brightness(0.75);
 }
-/* line 77, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 78, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
 .gif-bg.enter_the_matrix {
   background-image: url('/img/enter_the_matrix.gif?1375373852');
 }
-/* line 80, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 81, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
 .gif-bg.thanks {
   background-image: url('/img/thanks.gif?1375372989');
   width: 100%;
@@ -811,14 +808,14 @@ section.tools-are-a-hassle > .inner {
   filter: brightness(1);
 }
 
-/* line 91, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 92, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
 .heading-wrapper,
 header {
   font-size: 2em;
   text-align: center;
   text-transform: uppercase;
 }
-/* line 95, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 96, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
 .heading-wrapper span,
 header span {
   font-family: 'Gentium Book Basic', serif;
@@ -827,7 +824,7 @@ header span {
   display: block;
   margin-bottom: 0;
 }
-/* line 102, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 103, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
 .heading-wrapper span:before, .heading-wrapper span:after,
 header span:before,
 header span:after {
@@ -835,25 +832,23 @@ header span:after {
   content: '—';
   padding: 15px;
 }
-/* line 116, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 117, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
 .heading-wrapper .micro,
 header .micro {
   font-size: .45em;
 }
 
-/* line 122, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 123, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
 .conclusion .logo-wrapper {
-  height: 500px;
-}
-/* line 124, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
-.conclusion .logo-wrapper .roger {
-  margin-top: 40px;
-  margin-left: -7px;
+  height: 600px;
 }
 
 /* line 2, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_transition.scss */
 .bespoke-slide {
   overflow: hidden;
+}
+/* line 5, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_transition.scss */
+.bespoke-slide > .inner {
   -webkit-transform-origin: 50% 50% -50%;
   -moz-transform-origin: 50% 50% -50%;
   -ms-transform-origin: 50% 50% -50%;
@@ -861,7 +856,7 @@ header .micro {
   transform-origin: 50% 50% -50%;
 }
 
-/* line 6, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_transition.scss */
+/* line 9, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_transition.scss */
 .bespoke-active {
   opacity: 1;
   -webkit-transition: all 0.8s ease;
@@ -869,9 +864,22 @@ header .micro {
   -o-transition: all 0.8s ease;
   transition: all 0.8s ease;
 }
+/* line 12, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_transition.scss */
+.bespoke-active > .inner {
+  opacity: 1;
+  -webkit-transition: all 1.5s ease;
+  -moz-transition: all 1.5s ease;
+  -o-transition: all 1.5s ease;
+  transition: all 1.5s ease;
+}
 
-/* line 22, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_transition.scss */
-.bespoke-before {
+/* line 18, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_transition.scss */
+.bespoke-inactive > .inner {
+  opacity: 0;
+}
+
+/* line 25, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_transition.scss */
+.bespoke-before > .inner {
   -webkit-transform: rotateX(-90deg);
   -moz-transform: rotateX(-90deg);
   -ms-transform: rotateX(-90deg);
@@ -879,8 +887,8 @@ header .micro {
   transform: rotateX(-90deg);
 }
 
-/* line 26, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_transition.scss */
-.bespoke-after {
+/* line 32, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_transition.scss */
+.bespoke-after > .inner {
   -webkit-transform: rotateX(90deg);
   -moz-transform: rotateX(90deg);
   -ms-transform: rotateX(90deg);
