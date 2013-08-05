@@ -123,4 +123,5 @@ module.exports = function (grunt) {
 
     // Register Grunt tasks...
     grunt.task.registerTask('default', ['watch']);
+    grunt.task.registerTask('docs', ['markdown']);
 };
