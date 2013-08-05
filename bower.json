@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "dependencies": {
     "jquery": "2.0.3",
-    "requirejs": "2.1.8",
+    "modernizr": "2.6.2",
     "bespoke.js": "0.2.2",
     "bespoke-hash": "0.1.1",
     "bespoke-state": "0.2.1",
