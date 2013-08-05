@@ -11,7 +11,7 @@ module.exports = function (grunt) {
                 files: ['*.md', 'docs/src/*.md'],
                 tasks: ['markdown']
             }
-        }
+        },
         imagemin: {
             dist: {
                 options: {
