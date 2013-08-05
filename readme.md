@@ -1,5 +1,4 @@
-## A Rokkan Talk about Grunt
-##### Grunt is a Javascript task runner
+## Rokkan Talks Grunt
 
 Quit running your tasks manually and have Grunt run them for you.
 
