@@ -42,10 +42,14 @@
                     <header>
                         <h2 class="slide-title">Tools <span class="ascender">are</span> great</h2>
                     </header>
-                    <ul>
-                        <li>Compass</li>
-                    </ul>
                     <p>They help us write faster CSS. Others make our code more efficient and compact. Some compress PNG and JPG files for us so they&#39;ll be smaller without losing any quality. Other&#39;s encourage documentation by allowing you to construct HTML pages using other simpler languages such as Markdown. Some do linting of our PHP and JS files in order to mak sure that we don&#39;t commit code that could potentially break on the server or in the browser.</p>
+                    <ul class="tools">
+                        <li>Compass</li>
+                        <li>PHPUnit</li>
+                        <li>JSHint</li>
+                        <li>Markdown</li>
+                    </ul>
+                    
                 </div> <!-- /.inner -->
             </section>
             <section class="issues-with-tools">
@@ -91,7 +95,7 @@
                 <div class="gif-bg hipster"></div>
                 <div class="inner">
                     <header>
-                        <h2 class="slide-title">More <span class="micro">@#$%</span> Tools</h2>
+                        <h2 class="slide-title">No <span class="micro">%@&$</span> More <span class="micro">@#$%</span> Tools</h2>
                     </header>
                 </div> <!-- /.inner -->
             </section>
@@ -102,10 +106,10 @@
                         <h2 class="slide-title">Explaining <span class="micro">a Javascript task runner</span> Grunt</h2>
                     </header>
                     <blockquote>
-                        <p>Why use a task runner? In one word: automation. The less work you have to do when performing repetitive tasks like minification, compilation, unit testing, linting, etc, the easier your job becomes. After you&#39;ve configured it, a task running can do most of that mundane work for you—and your team—with basically zero effort. <a href="http://grunt.js.com/">source</a></p>
+                        <p>Why use a task runner? In one word: automation. The less work you have to do when performing repetitive tasks like minification, compilation, unit testing, linting, etc, the easier your job becomes. After you&#39;ve configured it, a task running can do most of that mundane work for you—and your team—with basically zero effort. <a href="http://grunt.js.com/" target="_blank">source</a></p>
                     </blockquote>
                     <blockquote>
-                        <p>Why use Grunt? The Grunt ecosystem is huge and it&#39;s growing every day. With literally hundreds of plugins to choose from, you can use Grunt to automate just about anything with a minimum of effort. If someone hasn&#39;t already built what you need, authoring and publishing your own Grunt plugin to npm is a breeze. <a href="http://grunt.js.com/">source</a></p>
+                        <p>Why use Grunt? The Grunt ecosystem is huge and it&#39;s growing every day. With literally hundreds of plugins to choose from, you can use Grunt to automate just about anything with a minimum of effort. If someone hasn&#39;t already built what you need, authoring and publishing your own Grunt plugin to npm is a breeze. <a href="http://grunt.js.com/" target="_blank">source</a></p>
                     </blockquote>
                     <div class="logo-wrapper">
                         <span class="logo grunt">Grunt</span>
@@ -116,26 +120,34 @@
                 <div class="gif-bg loading"></div>
                 <div class="inner">
                     <header>
-                        <h2 class="slide-title">Installing <span class="micro">NodeJS & NPM</span> Grunt</h2>
+                        <h2 class="slide-title">Installing <span class="micro">NodeJS & NPM &</span> Grunt</h2>
                     </header>
-                    <p>To use Grunt, we first need to install <a href="http://nodejs.org/">Nodejs</a>. You may already have it installed, but if not it&#39;s pretty simple to do.</p>
+                    <p>To use Grunt, we first need to install <a href="http://nodejs.org/" target="_blank">Nodejs</a>. You may already have it installed, but if not it&#39;s pretty simple to do.</p>
                     <blockquote>
-                    <p>Download the Node.js source code or pre-built installer for your platform, and start developing today. <a href="http://nodejs.org/download/">source</a></p>
+                    <p>Download the Node.js source code or pre-built installer for your platform, and start developing today. <a href="http://nodejs.org/download/" target="_blank">source</a></p>
                     </blockquote>
                     <p>Once Node is up and running, the next is the <code>grunt-cli</code> in order to have the grunt command available anywhere.</p>
                     <pre><code class="lang-shell"><span class="title">npm</span> install -g grunt-cli</code></pre>
                     <p>You may need to run the console as Adminstrator on Windows or use <code>sudo</code> in the terminal on Mac.</p>
                     <blockquote>
                     <p>This will put the <code>grunt</code> in your system path, allowing it to be run from any directory.</p>
-                    <p>Note that installing <code>grunt-cli</code> does not install the grunt task runner! The job of the grunt CLI is simple: run the version of grunt which has been installed next to a <code>Gruntfile</code>. This allows multiple versions of grunt to be installed on the same machine simultaneously. <a href="http://grunt.js.com/getting-started">source</a></p>
+                    <p>Note that installing <code>grunt-cli</code> does not install the grunt task runner! The job of the grunt CLI is simple: run the version of grunt which has been installed next to a <code>Gruntfile</code>. This allows multiple versions of grunt to be installed on the same machine simultaneously. <a href="http://grunt.js.com/getting-started" target="_blank">source</a></p>
                     </blockquote>
-                    <p>With those two dependencies out of the way, you&#39;re ready to start using Grunt. If you&#39;d like to learn more about using Grunt and setting up a project, please read the <a href="http://grunt.js.com/getting-started">Getting Started</a> guide.</p>
+                </div> <!-- /.inner -->
+            </section>
+            <section class="setting-up-grunt">
+                <div class="gif-bg loading"></div>
+                <div class="inner">
+                    <header>
+                        <h2 class="slide-title">Installing <span class="micro">your project's</span> Grunt version & plugins</h2>
+                    </header>
+                    <p>With those two dependencies out of the way, you&#39;re ready to start using Grunt. If you&#39;d like to learn more about using Grunt and setting up a project, please read the <a href="http://grunt.js.com/getting-started" target="_blank">Getting Started</a> guide.</p>
                     <p>First, install the projects dependencies. In this case, it&#39;s Grunt and the particular Grunt plugins you want to use.</p>
                     <pre><code class="lang-shell"><span class="title">npm</span> install</code></pre>
-                    <p>This will install all the dependencies listed in the project&#39;s <code>package.json</code> file. More information about this file can be found <a href="https://gist.github.com/rogeruiz/6140992#file-package-json">here</a>.</p>
-                    <p>Once those are installed, you can start using Grunt with all the configurations specified in the <a href="https://gist.github.com/rogeruiz/6140992#file-gruntfile-js">Gruntfile.js</a> file.</p>
-                    <pre><code class="lang-shell"><span class="attribute">grunt</code></pre>
-                </div> <!-- /.inner -->
+                    <p>This will install all the dependencies listed in the project&#39;s <code>package.json</code> file. More information about this file can be found <a href="https://gist.github.com/rogeruiz/6140992#file-package-json" target="_blank">here</a>.</p>
+                    <p>Once those are installed, you can start using Grunt with all the configurations specified in the <a href="https://gist.github.com/rogeruiz/6140992#file-gruntfile-js" target="_blank">Gruntfile.js</a> file.</p>
+                    <pre><code class="lang-shell"><span class="attribute">grunt --help</code></pre>
+                </div>
             </section>
             <section class="rokkan-workflow">
                 <div class="gif-bg moving_parts_too"></div>
@@ -143,19 +155,19 @@
                     <header>
                         <h2 class="slide-title">Updating <span>Rokkan's</span> Workflow</h2>
                     </header>
-                    <div class="logo-wrapper">
+                    <!-- <div class="logo-wrapper">
                         <span class="logo rokkan">Rokkan</span>
-                    </div>
+                    </div> -->
                     <p>The best part of using Grunt is the community support behind it. There are tons of plugins that have already been contributed to the project. Most of them are interfaces for tools we already use:</p>
                     <ul>
-                        <li><a href="https://npmjs.org/package/grunt-contrib-compass">Compass</a></li>
-                        <li><a href="https://npmjs.org/package/grunt-contrib-watch">Watch</a></li>
-                        <li><a href="https://github.com/treasonx/grunt-markdown">Markdown</a></li>
-                        <li><a href="https://npmjs.org/package/grunt-contrib-imagemin">Imagemin</a></li>
-                        <li><a href="https://npmjs.org/package/grunt-contrib-jshint">JSHint</a></li>
-                        <li><a href="https://npmjs.org/package/grunt-contrib-concat">Concat</a></li>
-                        <li><a href="https://npmjs.org/package/grunt-contrib-uglify">Uglify</a></li>
-                        <li><a href="http://gruntjs.com/plugins">A lot more</a></li>
+                        <li><a href="https://npmjs.org/package/grunt-contrib-compass" target="_blank">Compass</a></li>
+                        <li><a href="https://npmjs.org/package/grunt-contrib-watch" target="_blank">Watch</a></li>
+                        <li><a href="https://github.com/treasonx/grunt-markdown" target="_blank">Markdown</a></li>
+                        <li><a href="https://npmjs.org/package/grunt-contrib-imagemin" target="_blank">Imagemin</a></li>
+                        <li><a href="https://npmjs.org/package/grunt-contrib-jshint" target="_blank">JSHint</a></li>
+                        <li><a href="https://npmjs.org/package/grunt-contrib-concat" target="_blank">Concat</a></li>
+                        <li><a href="https://npmjs.org/package/grunt-contrib-uglify" target="_blank">Uglify</a></li>
+                        <li><a href="http://gruntjs.com/plugins" target="_blank">A lot more</a></li>
                     </ul>
                     <p>These tools do what you already know them to do. And are pretty simple to set up within a <code>Gruntfile.js</code>.</p>
                     <p>Here&#39;s Compass for example:</p>
@@ -192,7 +204,7 @@ compass: {
                     <header>
                         <h2 class="slide-title">Rokkan <span>uses</span> Grunt</h2>
                     </header>
-                    <h3>Dominic</h3>
+                        <h3>Dominic</h3>
                     <p>Available tasks:</p>
                     <ul>
                         <li><code>grunt compass</code></li>
@@ -202,8 +214,6 @@ compass: {
                     <hr>
                     <p>Dan</p>
                     <ul>
-                        <li><code>grunt uglify</code></li>
-                        <li><code>grunt</code></li>
                         <li><code>grunt compass:dev</code></li>
                         <li><code>grunt uglify</code></li>
                         <li><code>grunt copy</code></li>
@@ -213,16 +223,26 @@ compass: {
                     <p>Available tasks:</p>
                     <ul>
                         <li><code>grunt watch</code></li>
-                        <li><code>grunt qunit</code></li>
-                        <li><code>grunt phpunit</code></li>
-                        <li><code>grunt requirejs:dev</code></li>
-                        <li><code>grunt requirejs:dist</code></li>
-                        <li><code>grunt imagemin</code></li>
-                        <li><code>grunt compass:dev</code></li>
-                        <li><code>grunt compass:dist</code></li>
-                        <li><code>grunt markdown</code></li>
-                        <li><code>grunt jshint</code></li>
+                        <li><code>grunt test</code></li>
+                        <li><code>grunt build</code></li>
+                        <li><code>grunt docs</code></li>
+                        <li><code>grunt lint</code>*</li>
                     </ul>
+                </div>
+            </section>
+            <section class="endless-possibilities">
+                <div class="gif-bg future_tools"></div>
+                <div class="inner">
+                    <header>
+                        <h2 class="slide-title">Try <span>new tools</span> Faster</h2>
+                    </header>
+                    <p>Wouldn&#39;t it be great if you could update your workflow with new tools easily? Using Grunt you can do just that. Next time you see a new tool come out that you&#39;d like to try on a project, you can just add it to your <code>Gruntfile.js</code> and give it a try.</p>
+                    <h2>No headaches, no problems.</h2>
+                    <p>Find out that you need to minify things and copy files everytime you update something?</p>
+                    <h2>Grunt can easily be configured to do that.</h2>
+                    <p>Check out the <a href="http://gruntjs.com/plugins" target="_blank">plugins page</a> for all of the ways you can add new functionality to Grunt.</p>
+                    <h2>There are already a ton of plugins there.</h2>
+                    <p>There is also a <code>grunt-init</code> scaffolding tool used to automate project creation. A tool like this can be built for every different type of Rokkan project, present and future, and standardize and minimize our startup process. More information about this tool can be found <a href="http://gruntjs.com/project-scaffolding" target="_blank">here</a>.</p>
                 </div>
             </section>
             <section class="conclusion">
