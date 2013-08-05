@@ -137,212 +137,34 @@ line as:</p>
 we&#39;ve needed to do within a project. Compass compilation, documentation creation,
 minifying js, concating it, and setting up deploy folders.</p>
 <p>Here&#39;s a look at the Gruntfile.js for each project:</p>
-<h6>Rokkan-MainWebsite2013</h6>
-<p>Available tasks: <code>grunt uglify</code> </p>
-<pre><code class="lang-js"><span class="tag">grunt</span><span class="class">.initConfig</span>(<span class="rules">{
-  <span class="rule"><span class="attribute">uglify</span>:<span class="value"> {
-    my_target: {
-      files: {
-        <span class="string">'js/build/script.js'</span>: [<span class="string">'js/script.js'</span>],
-        <span class="string">'js/build/plugins.js'</span>: [<span class="string">'js/plugins.js'</span>]
-      }</span></span></span>
-    }
-  }
-});</code></pre>
-<h6>Stoli-OrgnlTv</h6>
-<p>Available tasks: <code>grunt compass</code>, <code>grunt uglify</code>, or <code>grunt watch</code></p>
-<pre><code class="lang-js">grunt.initConfig({
-  <span class="method">compass:</span> {
-    <span class="method">dev:</span> {
-      <span class="method">options:</span> {
-        <span class="method">config:</span> <span class="string">'config.rb'</span>,
-        <span class="method">force:</span> <span class="keyword">true</span>
-      }
-    }
-  },
-  <span class="method">uglify:</span> {
-    <span class="method">my_target:</span> {
-      <span class="method">files:</span> [ {
-        <span class="method">src:</span> [<span class="string">'assets/js/site/plugins.js'</span>, <span class="string">'assets/js/site/main.js'</span>],
-        <span class="method">dest:</span> <span class="string">'assets/js/site/main.min.js'</span>
-      } ]
-    }
-  },
-  <span class="method">watch:</span> {
-    <span class="method">sass:</span> {
-      <span class="method">files:</span> [<span class="string">'assets/sass/**/*.scss'</span>],
-      <span class="method">tasks:</span> [<span class="string">'compass:dev'</span>]
-    },
-    /* watch and see if our javascript files change, or new packages are installed */
-    <span class="method">js:</span> {
-      <span class="method">files:</span> [<span class="string">'assets/js/site/*.js'</span>],
-      <span class="method">tasks:</span> [<span class="string">'uglify'</span>, <span class="string">'uglify:my_target'</span>]
-    },
-    /* watch our files for change, reload */
-    <span class="method">livereload:</span> {
-      <span class="method">files:</span> [<span class="string">'*.html'</span>, <span class="string">'assets/css/site/*.css'</span>, <span class="string">'assets/images/*'</span>, <span class="string">'assets/js/site/main.min.js'</span>],
-      <span class="method">options:</span> {
-        <span class="method">livereload:</span> <span class="keyword">true</span>
-      }
-    }
-  }
-});</code></pre>
-<h6>Evil Within</h6>
-<p>Available tasks: <code>grunt uglify</code>, <code>grunt copy</code>, or <code>grunt compass</code></p>
-<pre><code class="lang-js">  grunt.config.init({
-    //<span class="keyword">...</span> Grab it from the Lamp Repo
-});</code></pre>
-<h6>WellPoint-RealHealthSite</h6>
-<p>Available tasks: <code>grunt watch</code>, <code>grunt qunit</code>, <code>grunt phpunit</code>, <code>grunt requirejs:dev</code>,
-<code>grunt requirejs:dist</code>, <code>grunt imagemin</code>, <code>grunt compass:dev</code>, <code>grunt compass:dist</code>,
-<code>grunt markdown</code> or <code>grunt jshint</code></p>
-<pre><code class="lang-js">grunt.config.init({
-  <span class="method">pkg:</span> grunt.file.readJSON(<span class="string">'package.json'</span>),
-  <span class="method">qunit:</span> {
-    <span class="method">all:</span> [<span class="string">'tests/*.html'</span>]
-  },
-  <span class="method">exec:</span> {
-    <span class="method">phpunit:</span> {
-      <span class="method">cmd:</span> <span class="string">'phpunit tests'</span>
-    }
-  },
-  <span class="method">watch:</span> {
-    <span class="method">scripts:</span> {
-      <span class="method">files:</span> [<span class="string">'web/js/lib/*.js'</span>, <span class="string">'web/js/src/*.js'</span>],
-      <span class="method">tasks:</span> [<span class="string">'requirejs:dev'</span>]
-    },
-    <span class="method">stylesheets:</span> {
-      <span class="method">files:</span> [<span class="string">'web/scss/lib/*.scss'</span>, <span class="string">'web/scss/src/*.scss'</span>],
-      <span class="method">tasks:</span> [<span class="string">'compass:dev'</span>]
-    },
-    <span class="method">docs:</span> {
-      <span class="method">files:</span> [<span class="string">'*.markdown'</span>, <span class="string">'docs/src/*.markdown'</span>],
-      <span class="method">tasks:</span> [<span class="string">'markdown'</span>]
-    },
-    <span class="method">qunit:</span> {
-      <span class="method">files:</span> [<span class="string">'tests/**/*.html'</span>, <span class="string">'tests/**/*.js'</span>, <span class="string">'web/src/app.js'</span>],
-      <span class="method">tasks:</span> [<span class="string">'qunit'</span>]
-    },
-    <span class="method">phpunit:</span> {
-      <span class="method">files:</span> [<span class="string">'tests/**/*.php'</span>],
-      <span class="method">tasks:</span> [<span class="string">'exec:phpunit'</span>]
-    }
-  },
-  <span class="method">requirejs:</span> {
-    <span class="method">dist:</span> {
-      <span class="method">options:</span> {
-        <span class="method">baseUrl:</span> <span class="comment">"web/js"</span>,
-        <span class="method">name:</span> <span class="comment">"src/main"</span>,
-        <span class="method">paths:</span> {
-          <span class="comment">"src"</span>: <span class="comment">"src"</span>,
-          <span class="comment">"jquery"</span>: <span class="comment">"lib/jquery"</span>
-        },
-        <span class="method">out:</span> <span class="comment">"web/js/app.js"</span>,
-        <span class="method">optimize:</span> <span class="string">'uglify2'</span>,
-        <span class="method">preserveLicenseComments:</span> <span class="keyword">false</span>,
-        <span class="method">generateSourceMaps:</span> <span class="keyword">true</span>,
-        <span class="method">compress:</span> {
-          <span class="method">dead_code:</span> <span class="keyword">true</span>,
-          <span class="method">unused:</span> <span class="keyword">true</span>
-        }
-      }
-    },
-    <span class="method">dev:</span> {
-      <span class="method">options:</span> {
-        <span class="method">baseUrl:</span> <span class="comment">"web/js"</span>,
-        <span class="method">name:</span> <span class="comment">"src/main"</span>,
-        <span class="method">paths:</span> {
-          <span class="comment">"src"</span>: <span class="comment">"src"</span>,
-          <span class="comment">"jquery"</span>: <span class="comment">"lib/jquery"</span>
-        },
-        <span class="method">out:</span> <span class="comment">"web/js/app.js"</span>,
-        <span class="method">optimize:</span> <span class="string">'none'</span>
-      }
-    }
-  },
-  <span class="method">imagemin:</span> {
-    <span class="method">dist:</span> {
-      <span class="method">options:</span> {
-        <span class="method">optimizationLevel:</span> <span class="number">3</span>
-      },
-      <span class="method">files:</span> [{
-        <span class="method">expand:</span> <span class="keyword">true</span>,
-        <span class="method">cwd:</span> <span class="string">'web/img'</span>,
-        <span class="method">src:</span> [<span class="string">'*.png'</span>],
-        <span class="method">dest:</span> <span class="string">'web/img'</span>,
-        <span class="method">ext:</span> <span class="string">'.png'</span>
-      },{
-        <span class="method">expand:</span> <span class="keyword">true</span>,
-        <span class="method">cwd:</span> <span class="string">'web/img'</span>,
-        <span class="method">src:</span> [<span class="string">'*.jpg'</span>],
-        <span class="method">dest:</span> <span class="string">'web/img'</span>,
-        <span class="method">ext:</span> <span class="string">'.jpg'</span>
-      },{
-        <span class="method">expand:</span> <span class="keyword">true</span>,
-        <span class="method">cwd:</span> <span class="string">'web/img'</span>,
-        <span class="method">src:</span> [<span class="string">'*.jpeg'</span>],
-        <span class="method">dest:</span> <span class="string">'web/img'</span>,
-        <span class="method">ext:</span> <span class="string">'.jpeg'</span>
-      }]
-    }
-  },
-  <span class="method">compass:</span> {
-    <span class="method">dist:</span> {
-      <span class="method">options:</span> {
-        <span class="method">config:</span> <span class="string">'config/compass.rb'</span>,
-        <span class="method">outputStyle:</span> <span class="string">'compressed'</span>,
-        <span class="method">noLineComments:</span> <span class="keyword">true</span>,
-        <span class="method">environment:</span> <span class="string">'production'</span>
-      }
-    },
-    <span class="method">dev:</span> {
-      <span class="method">options:</span> {
-        <span class="method">config:</span> <span class="string">'config/compass.rb'</span>,
-        <span class="method">outputStyle:</span> <span class="string">'expanded'</span>,
-        <span class="method">noLineComments:</span> <span class="keyword">false</span>,
-        <span class="method">environment:</span> <span class="string">'development'</span>
-      }
-    }
-  },
-  <span class="method">markdown:</span> {
-    <span class="method">docs:</span> {
-      <span class="method">files:</span> [
-        {
-          <span class="method">expand:</span> <span class="keyword">true</span>,
-          <span class="method">cwd:</span> <span class="string">'docs/src'</span>,
-          <span class="method">src:</span> [<span class="string">'*.markdown'</span>],
-          <span class="method">dest:</span> <span class="string">'docs'</span>,
-          <span class="method">ext:</span> <span class="string">'.html'</span>
-        }
-      ],
-      <span class="method">options:</span> {
-        <span class="method">template:</span> <span class="string">'docs/src/article.markdown.jst'</span>,
-        <span class="method">markdownOptions:</span> {
-          <span class="method">gfm:</span> <span class="keyword">true</span>,
-          <span class="method">highlight:</span> <span class="string">'manual'</span>
-        }
-      }
-    },
-    <span class="method">readme:</span> {
-      <span class="method">files:</span> {
-        <span class="string">'docs/index.html'</span>: [<span class="string">'README.markdown'</span>]
-      },
-      <span class="method">options:</span> {
-        <span class="method">template:</span> <span class="string">'docs/src/index.markdown.jst'</span>,
-        <span class="method">markdownOptions:</span> {
-          <span class="method">gfm:</span> <span class="keyword">true</span>,
-          <span class="method">highlight:</span> <span class="string">'manual'</span>
-        }
-      }
-    }
-  },
-  <span class="method">jshint:</span> {
-    <span class="method">files:</span> [<span class="string">'Gruntfile.js'</span>, <span class="string">'web/js/src/*.js'</span>, <span class="string">'tests/tests.js'</span>],
-    <span class="method">options:</span> {
-      <span class="method">ignores:</span> [<span class="string">'web/js/lib/*.js'</span>, <span class="string">'web/js/app.js'</span>]
-    }
-  }
-});</code></pre>
+<h3>Dan</h3>
+<p>Available tasks:</p>
+<ul>
+<li><code>grunt uglify</code></li>
+<li><code>grunt copy</code></li>
+<li><code>grunt compass</code></li>
+</ul>
+<h3>Dominic</h3>
+<p>Available tasks:</p>
+<ul>
+<li><code>grunt compass</code></li>
+<li><code>grunt uglify</code></li>
+<li><code>grunt watch</code></li>
+</ul>
+<h3>Roger</h3>
+<p>Available tasks:</p>
+<ul>
+<li><code>grunt watch</code></li>
+<li><code>grunt qunit</code></li>
+<li><code>grunt phpunit</code></li>
+<li><code>grunt requirejs:dev</code></li>
+<li><code>grunt requirejs:dist</code></li>
+<li><code>grunt imagemin</code></li>
+<li><code>grunt compass:dev</code></li>
+<li><code>grunt compass:dist</code></li>
+<li><code>grunt markdown</code></li>
+<li><code>grunt jshint</code></li>
+</ul>
 <h5>Endless possibilities</h5>
 <p>Wouldn&#39;t it be great if you could update your workflow with new tools easily?
 Using Grunt you can do just that. Next time you see a new tool come out that

@@ -171,223 +171,35 @@ minifying js, concating it, and setting up deploy folders.
 
 Here's a look at the Gruntfile.js for each project:
 
-###### Rokkan-MainWebsite2013
-Available tasks: `grunt uglify` 
-```js
-grunt.initConfig({
-  uglify: {
-    my_target: {
-      files: {
-        'js/build/script.js': ['js/script.js'],
-        'js/build/plugins.js': ['js/plugins.js']
-      }
-    }
-  }
-});
-```
+### Dan
+Available tasks:
 
-###### Stoli-OrgnlTv
-Available tasks: `grunt compass`, `grunt uglify`, or `grunt watch`
-```js
-grunt.initConfig({
-  compass: {
-    dev: {
-      options: {
-        config: 'config.rb',
-        force: true
-      }
-    }
-  },
-  uglify: {
-    my_target: {
-      files: [ {
-        src: ['assets/js/site/plugins.js', 'assets/js/site/main.js'],
-        dest: 'assets/js/site/main.min.js'
-      } ]
-    }
-  },
-  watch: {
-    sass: {
-      files: ['assets/sass/**/*.scss'],
-      tasks: ['compass:dev']
-    },
-    /* watch and see if our javascript files change, or new packages are installed */
-    js: {
-      files: ['assets/js/site/*.js'],
-      tasks: ['uglify', 'uglify:my_target']
-    },
-    /* watch our files for change, reload */
-    livereload: {
-      files: ['*.html', 'assets/css/site/*.css', 'assets/images/*', 'assets/js/site/main.min.js'],
-      options: {
-        livereload: true
-      }
-    }
-  }
-});
-```
+- `grunt uglify`
+- `grunt copy`
+- `grunt compass`
 
-###### Evil Within
-Available tasks: `grunt uglify`, `grunt copy`, or `grunt compass`
-```js
-  grunt.config.init({
-    //... Grab it from the Lamp Repo
-});
-```
 
-###### WellPoint-RealHealthSite
-Available tasks: `grunt watch`, `grunt qunit`, `grunt phpunit`, `grunt requirejs:dev`,
-`grunt requirejs:dist`, `grunt imagemin`, `grunt compass:dev`, `grunt compass:dist`,
-`grunt markdown` or `grunt jshint`
-```js
-grunt.config.init({
-  pkg: grunt.file.readJSON('package.json'),
-  qunit: {
-    all: ['tests/*.html']
-  },
-  exec: {
-    phpunit: {
-      cmd: 'phpunit tests'
-    }
-  },
-  watch: {
-    scripts: {
-      files: ['web/js/lib/*.js', 'web/js/src/*.js'],
-      tasks: ['requirejs:dev']
-    },
-    stylesheets: {
-      files: ['web/scss/lib/*.scss', 'web/scss/src/*.scss'],
-      tasks: ['compass:dev']
-    },
-    docs: {
-      files: ['*.markdown', 'docs/src/*.markdown'],
-      tasks: ['markdown']
-    },
-    qunit: {
-      files: ['tests/**/*.html', 'tests/**/*.js', 'web/src/app.js'],
-      tasks: ['qunit']
-    },
-    phpunit: {
-      files: ['tests/**/*.php'],
-      tasks: ['exec:phpunit']
-    }
-  },
-  requirejs: {
-    dist: {
-      options: {
-        baseUrl: "web/js",
-        name: "src/main",
-        paths: {
-          "src": "src",
-          "jquery": "lib/jquery"
-        },
-        out: "web/js/app.js",
-        optimize: 'uglify2',
-        preserveLicenseComments: false,
-        generateSourceMaps: true,
-        compress: {
-          dead_code: true,
-          unused: true
-        }
-      }
-    },
-    dev: {
-      options: {
-        baseUrl: "web/js",
-        name: "src/main",
-        paths: {
-          "src": "src",
-          "jquery": "lib/jquery"
-        },
-        out: "web/js/app.js",
-        optimize: 'none'
-      }
-    }
-  },
-  imagemin: {
-    dist: {
-      options: {
-        optimizationLevel: 3
-      },
-      files: [{
-        expand: true,
-        cwd: 'web/img',
-        src: ['*.png'],
-        dest: 'web/img',
-        ext: '.png'
-      },{
-        expand: true,
-        cwd: 'web/img',
-        src: ['*.jpg'],
-        dest: 'web/img',
-        ext: '.jpg'
-      },{
-        expand: true,
-        cwd: 'web/img',
-        src: ['*.jpeg'],
-        dest: 'web/img',
-        ext: '.jpeg'
-      }]
-    }
-  },
-  compass: {
-    dist: {
-      options: {
-        config: 'config/compass.rb',
-        outputStyle: 'compressed',
-        noLineComments: true,
-        environment: 'production'
-      }
-    },
-    dev: {
-      options: {
-        config: 'config/compass.rb',
-        outputStyle: 'expanded',
-        noLineComments: false,
-        environment: 'development'
-      }
-    }
-  },
-  markdown: {
-    docs: {
-      files: [
-        {
-          expand: true,
-          cwd: 'docs/src',
-          src: ['*.markdown'],
-          dest: 'docs',
-          ext: '.html'
-        }
-      ],
-      options: {
-        template: 'docs/src/article.markdown.jst',
-        markdownOptions: {
-          gfm: true,
-          highlight: 'manual'
-        }
-      }
-    },
-    readme: {
-      files: {
-        'docs/index.html': ['README.markdown']
-      },
-      options: {
-        template: 'docs/src/index.markdown.jst',
-        markdownOptions: {
-          gfm: true,
-          highlight: 'manual'
-        }
-      }
-    }
-  },
-  jshint: {
-    files: ['Gruntfile.js', 'web/js/src/*.js', 'tests/tests.js'],
-    options: {
-      ignores: ['web/js/lib/*.js', 'web/js/app.js']
-    }
-  }
-});
-```
+### Dominic
+Available tasks:
+ 
+- `grunt compass`
+- `grunt uglify`
+- `grunt watch`
+
+### Roger
+Available tasks:
+
+- `grunt watch`
+- `grunt qunit`
+- `grunt phpunit`
+- `grunt requirejs:dev`
+- `grunt requirejs:dist`
+- `grunt imagemin`
+- `grunt compass:dev`
+- `grunt compass:dist`
+- `grunt markdown`
+- `grunt jshint`
+
 
 ##### Endless possibilities
 
