@@ -11,22 +11,7 @@ module.exports = function (grunt) {
                 files: ['*.md', 'docs/src/*.md'],
                 tasks: ['markdown']
             }
-        },
-        requirejs: {
-            options: {
-                baseUrl: 'js/lib',
-                mainConfigFile: 'js/src/config.js',
-                path: {
-                    'src': '../src'
-                },
-                out: 'js/app.js'
-            },
-            dev: {
-                options: {
-                    optimize: 'none'
-                }
-            }
-        },
+        }
         imagemin: {
             dist: {
                 options: {
@@ -116,8 +101,6 @@ module.exports = function (grunt) {
     grunt.task.loadNpmTasks('grunt-exec');
     grunt.task.loadNpmTasks('grunt-contrib-watch');
     grunt.task.loadNpmTasks('grunt-contrib-compass');
-    grunt.task.loadNpmTasks('grunt-contrib-requirejs');
-    grunt.task.loadNpmTasks('grunt-contrib-qunit');
     grunt.task.loadNpmTasks('grunt-contrib-imagemin');
     grunt.task.loadNpmTasks('grunt-markdown');
 
