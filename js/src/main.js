@@ -1,16 +1,16 @@
-require(['bespoke'], function (bespoke) {
-    bespoke.vertical.from('article');
+bespoke.vertical.from('article', {
+    hash: true
+});
 
-    var verticalCenter = function (el) {
-        var offSetHeight = ((el.height())- window.outerHeight / 2 );
-        el.find('.inner').css({
-            'top': '' + Math.ceil(offSetHeight) + 'px'
-        });
-    }
-
-    verticalCenter($('.bespoke-active'));
-    bespoke.on('activate', function (e) {
-        verticalCenter($(e.slide));
+var verticalCenter = function (el) {
+    var offSetHeight = ((window.outerHeight - el.find('> .inner').height()) * 0.5 );
+    el.find('> .inner').css({
+        'top': '' + Math.ceil(offSetHeight) + 'px'
+        // 'height': '' + Math.ceil(window.outerHeight - 40) + 'px'
     });
+}
 
+verticalCenter($('.bespoke-active'));
+bespoke.on('activate', function (e) {
+    verticalCenter($(e.slide));
 });
