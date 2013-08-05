@@ -12,74 +12,240 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,800' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/app.css">
+
+        <script src="js/lib/modernizr.js"></script>
+
     </head>
     <body>
 
         <article>
-            <section class="intro">
-                <div class="gif-bg drip"></div>
+            <section class="introduction">
                 <div class="inner">
-                    <h1 class="logo">Rokkan</h1>
-                    <span class="me"></span>
-                    <p>Slide</p>
+                    <div class="logo-wrapper">
+                        <span class="logo rokkan">Rokkan</span>
+                    </div>
+                    <header>
+                        <h1 class="slide-title">Rokkan <span>talks</span> Grunt</h1>
+                    </header>
+                    <div class="logo-wrapper">
+                        <span class="logo grunt">Grunt</span>
+                    </div>
                 </div> <!-- /.inner -->
             </section>
-            <section>
-                <div class="gif-bg enter_the_matrix"></div>
-                <div class="inner">
-                </div> <!-- /.inner -->
-            </section>
-            <section>
-                <div class="gif-bg magic_kitty"></div>
-                <div class="inner">
-                </div> <!-- /.inner -->
-            </section>
-            <section>
-                <div class="inner">
-                    <p>Slide</p>
-                </div> <!-- /.inner -->
-            </section>
-            <section>
-                <div class="gif-bg hipster"></div>
-                <div class="inner">
-                </div> <!-- /.inner -->
-            </section>
-            <section>
-                <div class="gif-bg fear_of_change"></div>
-                <div class="inner">
-                </div> <!-- /.inner -->
-            </section>
-            <section>
+            <section class="example-of-tools">
                 <div class="gif-bg moving_parts"></div>
                 <div class="inner">
+                    <header>
+                        <h2 class="slide-title">Tools <span class="ascender">are</span> great</h2>
+                    </header>
+                    <ul>
+                        <li>Compass</li>
+                    </ul>
+                    <p>They help us write faster CSS. Others make our code more efficient and compact. Some compress PNG and JPG files for us so they&#39;ll be smaller without losing any quality. Other&#39;s encourage documentation by allowing you to construct HTML pages using other simpler languages such as Markdown. Some do linting of our PHP and JS files in order to mak sure that we don&#39;t commit code that could potentially break on the server or in the browser.</p>
                 </div> <!-- /.inner -->
             </section>
-            <section>
-                <div class="gif-bg loading"></div>
+            <section class="issues-with-tools">
+                <div class="gif-bg fear_of_change"></div>
                 <div class="inner">
+                    <header>
+                        <h2 class="slide-title">Change <span>can be</span> impractical</h2>
+                    </header>
+                    <p>There are issues with having this many tools, though. We spend so much time running a forked list of things that need to be constantly running in the background in order to compile our code for the browser. We write out our <code>readme</code> files in Markdown but never bother compiling them to HTML to serve them up in the browser. We know we should be compressing and minifying our image, js, and css assets. But if there is a deadline, we&#39;re often leaving that to the last minute if we get a chance to do it at all.</p>
                 </div> <!-- /.inner -->
             </section>
-            <section>
+            <section class="tools-are-a-hassle">
                 <div class="gif-bg no_time"></div>
                 <div class="inner">
-                    <p>Slide</p>
+                    <header>
+                        <h2 class="slide-title">Tools <span class="descender">require</span> time</h2>
+                    </header>
+                    <ul>
+                        <li>Compass requires <code>compass watch</code> to be running at the root of the working directory.</li>
+                        <li>PHPLint and JSHint require either <code>php -l [file]</code> or <code>jshint [file]</code> to be run each and every time you save your files.</li>
+                        <li>Markdown conversion is made easy by having a markdown parse do things for you, but which one do we use and when?</li>
+                        <li>Compressing image files is great, but we have to remember to do it whenever we add images to the repository.</li>
+                        <li>The latest CLI tool which does XYZ better than ABC and should be run under specific file-change conditions.</li>
+                        <li>That little tool in your belt that you love to use, but hate running because of the carpel tunnel.</li>
+                        <li>Building out assets for easier delivery to clients or production servers.</li>
+                    </ul>
                 </div> <!-- /.inner -->
             </section>
-            <section>
+            <section class="introducing-grunt">
+                <div class="gif-bg magic_kitty"></div>
+                <div class="inner">
+                    <header>
+                        <h2 class="slide-title">Introducing <span class="micro">a Javascript task runner</span> Grunt</h2>
+                    </header>
+                    <p>Grunt is a javascript task runner built on top of Node.</p>
+                    <p>It&#39;s a Node application. It runs what you want it to when you want it to. The configuration all happens in JSON, so it&#39;s easy to write and understand. Simple as that.</p>
+                    <div class="logo-wrapper">
+                        <span class="logo grunt">Grunt</span>
+                    </div>
+                </div> <!-- /.inner -->
+            </section>
+            <section class="against-grunt">
+                <div class="gif-bg hipster"></div>
+                <div class="inner">
+                    <header>
+                        <h2 class="slide-title">More <span class="micro">@#$%</span> Tools</h2>
+                    </header>
+                </div> <!-- /.inner -->
+            </section>
+            <section class="explaining-grunt">
+                <div class="gif-bg grunt_task"></div>
+                <div class="inner">
+                    <header>
+                        <h2 class="slide-title">Explaining <span class="micro">a Javascript task runner</span> Grunt</h2>
+                    </header>
+                    <blockquote>
+                        <p>Why use a task runner? In one word: automation. The less work you have to do when performing repetitive tasks like minification, compilation, unit testing, linting, etc, the easier your job becomes. After you&#39;ve configured it, a task running can do most of that mundane work for you—and your team—with basically zero effort. <a href="http://grunt.js.com/">source</a></p>
+                    </blockquote>
+                    <blockquote>
+                        <p>Why use Grunt? The Grunt ecosystem is huge and it&#39;s growing every day. With literally hundreds of plugins to choose from, you can use Grunt to automate just about anything with a minimum of effort. If someone hasn&#39;t already built what you need, authoring and publishing your own Grunt plugin to npm is a breeze. <a href="http://grunt.js.com/">source</a></p>
+                    </blockquote>
+                    <div class="logo-wrapper">
+                        <span class="logo grunt">Grunt</span>
+                    </div>
+                </div>
+            </section>
+            <section class="setting-up-grunt">
+                <div class="gif-bg loading"></div>
+                <div class="inner">
+                    <header>
+                        <h2 class="slide-title">Installing <span class="micro">NodeJS & NPM</span> Grunt</h2>
+                    </header>
+                    <p>To use Grunt, we first need to install <a href="http://nodejs.org/">Nodejs</a>. You may already have it installed, but if not it&#39;s pretty simple to do.</p>
+                    <blockquote>
+                    <p>Download the Node.js source code or pre-built installer for your platform, and start developing today. <a href="http://nodejs.org/download/">source</a></p>
+                    </blockquote>
+                    <p>Once Node is up and running, the next is the <code>grunt-cli</code> in order to have the grunt command available anywhere.</p>
+                    <pre><code class="lang-shell"><span class="title">npm</span> install -g grunt-cli</code></pre>
+                    <p>You may need to run the console as Adminstrator on Windows or use <code>sudo</code> in the terminal on Mac.</p>
+                    <blockquote>
+                    <p>This will put the <code>grunt</code> in your system path, allowing it to be run from any directory.</p>
+                    <p>Note that installing <code>grunt-cli</code> does not install the grunt task runner! The job of the grunt CLI is simple: run the version of grunt which has been installed next to a <code>Gruntfile</code>. This allows multiple versions of grunt to be installed on the same machine simultaneously. <a href="http://grunt.js.com/getting-started">source</a></p>
+                    </blockquote>
+                    <p>With those two dependencies out of the way, you&#39;re ready to start using Grunt. If you&#39;d like to learn more about using Grunt and setting up a project, please read the <a href="http://grunt.js.com/getting-started">Getting Started</a> guide.</p>
+                    <p>First, install the projects dependencies. In this case, it&#39;s Grunt and the particular Grunt plugins you want to use.</p>
+                    <pre><code class="lang-shell"><span class="title">npm</span> install</code></pre>
+                    <p>This will install all the dependencies listed in the project&#39;s <code>package.json</code> file. More information about this file can be found <a href="https://gist.github.com/rogeruiz/6140992#file-package-json">here</a>.</p>
+                    <p>Once those are installed, you can start using Grunt with all the configurations specified in the <a href="https://gist.github.com/rogeruiz/6140992#file-gruntfile-js">Gruntfile.js</a> file.</p>
+                    <pre><code class="lang-shell"><span class="attribute">grunt</code></pre>
+                </div> <!-- /.inner -->
+            </section>
+            <section class="rokkan-workflow">
+                <div class="gif-bg moving_parts_too"></div>
+                <div class="inner">
+                    <header>
+                        <h2 class="slide-title">Updating <span>Rokkan's</span> Workflow</h2>
+                    </header>
+                    <div class="logo-wrapper">
+                        <span class="logo rokkan">Rokkan</span>
+                    </div>
+                    <p>The best part of using Grunt is the community support behind it. There are tons of plugins that have already been contributed to the project. Most of them are interfaces for tools we already use:</p>
+                    <ul>
+                        <li><a href="https://npmjs.org/package/grunt-contrib-compass">Compass</a></li>
+                        <li><a href="https://npmjs.org/package/grunt-contrib-watch">Watch</a></li>
+                        <li><a href="https://github.com/treasonx/grunt-markdown">Markdown</a></li>
+                        <li><a href="https://npmjs.org/package/grunt-contrib-imagemin">Imagemin</a></li>
+                        <li><a href="https://npmjs.org/package/grunt-contrib-jshint">JSHint</a></li>
+                        <li><a href="https://npmjs.org/package/grunt-contrib-concat">Concat</a></li>
+                        <li><a href="https://npmjs.org/package/grunt-contrib-uglify">Uglify</a></li>
+                        <li><a href="http://gruntjs.com/plugins">A lot more</a></li>
+                    </ul>
+                    <p>These tools do what you already know them to do. And are pretty simple to set up within a <code>Gruntfile.js</code>.</p>
+                    <p>Here&#39;s Compass for example:</p>
+<pre><code class="lang-js">// <span class="keyword">...</span>
+compass: {
+  options: {
+    basePath: <span class="string">'/'</span>,
+    sassPath: <span class="string">'scss'</span>,
+    cssPath: <span class="string">'css'</span>,
+    imagesPath: <span class="string">'img'</span>,
+    javascriptsPath: <span class="string">'js'</span>,
+    noLineComments: false,
+    force: true
+  },
+  dist: {
+    options: {
+      outputStyle: <span class="string">'compressed'</span>,
+      environment: <span class="string">'production'</span>
+    }
+  },
+  dev: {
+    options: {
+      outputStyle: <span class="string">'expanded'</span>,
+      environment: <span class="string">'development'</span>
+    }
+  }
+}
+// <span class="keyword">...</span></code></pre>
+                </div> <!-- /.inner -->
+            </section>
+            <section class="grunt-examples">
+                <div class="gif-bg enter_the_matrix"></div>
+                <div class="inner">
+                    <header>
+                        <h2 class="slide-title">Rokkan <span>uses</span> Grunt</h2>
+                    </header>
+                    <h3>Rokkan-MainWebsite2013</h3>
+                    <p>Available tasks:</p>
+                    <ul>
+                        <li><code>grunt uglify</code></li>
+                    </ul>
+                    <hr>
+                    <h3>Stoli-OrgnlTv</h3>
+                    <p>Available tasks:</p>
+                    <ul>
+                        <li><code>grunt compass</code></li>
+                        <li><code>grunt uglify</code></li>
+                        <li><code>grunt watch</code></li>
+                    </ul>
+                    <hr>
+                    <h3>Bethesda-TheEvilWithin</h3>
+                    <p>Available tasks:</p>
+                    <ul>
+                        <li><code>grunt</code></li>
+                        <li><code>grunt compass:dev</code></li>
+                        <li><code>grunt uglify</code></li>
+                        <li><code>grunt copy</code></li>
+                    </ul>
+                    <hr>
+                    <h3>WellPoint-RealHealthSite</h3>
+                    <p>Available tasks:</p>
+                    <ul>
+                        <li><code>grunt watch</code></li>
+                        <li><code>grunt qunit</code></li>
+                        <li><code>grunt phpunit</code></li>
+                        <li><code>grunt requirejs:dev</code></li>
+                        <li><code>grunt requirejs:dist</code></li>
+                        <li><code>grunt imagemin</code></li>
+                        <li><code>grunt compass:dev</code></li>
+                        <li><code>grunt compass:dist</code></li>
+                        <li><code>grunt markdown</code></li>
+                        <li><code>grunt jshint</code></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="conclusion">
                 <div class="gif-bg thanks"></div>
                 <div class="inner">
-                    <h1 class="logo">Rokkan</h1>
-                    <span class="me"></span>
-                    <p>Slide</p>
+                    <div class="logo-wrapper">
+                        <span class="logo rokkan">Rokkan</span>
+                        <span class="logo roger">Roger</span>
+                    </div>
                 </div> <!-- /.inner -->
             </section>
         </article>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/lib/jquery.js"><\/script>')</script>
-        <script src="js/lib/require.js"></script>
-        <script src="js/src/config.js"></script>
+        <script src="js/lib/bespoke.js"></script>
+        <script src="js/lib/bespoke-hash.js"></script>
         <script src="js/src/main.js"></script>
 
     </body>
