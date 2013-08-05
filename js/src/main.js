@@ -3,7 +3,7 @@ bespoke.vertical.from('article', {
 });
 
 var verticalCenter = function (el) {
-    var offSetHeight = ((window.outerHeight - el.find('> .inner').height()) * 0.5 );
+    var offSetHeight = ((window.outerHeight - el.find('> .inner').height()) * 0.35 );
     el.find('> .inner').css({
         'top': '' + Math.ceil(offSetHeight) + 'px'
         // 'height': '' + Math.ceil(window.outerHeight - 40) + 'px'
