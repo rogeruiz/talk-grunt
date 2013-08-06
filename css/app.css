@@ -13,7 +13,7 @@
 /*
  * Corrects `block` display not defined in IE 8/9.
  */
-/* line 31, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 31, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 article,
 aside,
 details,
@@ -32,7 +32,7 @@ summary {
 /**
  * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
-/* line 41, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 41, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 audio,
 canvas,
 video {
@@ -43,7 +43,7 @@ video {
  * Prevents modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-/* line 54, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 54, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -52,7 +52,7 @@ audio:not([controls]) {
 /**
  * Address styling not present in IE 8/9.
  */
-/* line 63, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 63, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 [hidden] {
   display: none;
 }
@@ -66,7 +66,7 @@ audio:not([controls]) {
  * 3.Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
  *    `em` units.
  */
-/* line 78, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 78, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 html {
   font-family: sans-serif;
   /* 1 */
@@ -79,7 +79,7 @@ html {
 /**
  * Remove default margin.
  */
-/* line 91, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 91, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 body {
   margin: 0;
 }
@@ -93,11 +93,11 @@ body {
 /**
  * Improves readability when focused and also mouse hovered in all browsers.
  */
-/* line 108, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 108, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 a:focus {
   outline: thin dotted;
 }
-/* line 111, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 111, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 a:active, a:hover {
   outline: 0;
 }
@@ -110,7 +110,7 @@ a:active, a:hover {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari 5, and Chrome.
  */
-/* line 127, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 127, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -119,7 +119,7 @@ h1 {
 /**
  * Address styling not present in IE 8/9, Safari 5, and Chrome.
  */
-/* line 166, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 166, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -127,7 +127,7 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
  */
-/* line 175, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 175, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 b,
 strong {
   font-weight: bold;
@@ -136,7 +136,7 @@ strong {
 /**
  * Address styling not present in Safari 5 and Chrome.
  */
-/* line 189, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 189, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 dfn {
   font-style: italic;
 }
@@ -144,7 +144,7 @@ dfn {
 /**
  * Address differences between Firefox and other browsers.
  */
-/* line 197, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 197, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -154,7 +154,7 @@ hr {
 /**
  * Addresses styling not present in IE 8/9.
  */
-/* line 207, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 207, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 mark {
   background: #ff0;
   color: #000;
@@ -166,7 +166,7 @@ mark {
 /**
  * Correct font family set oddly in Safari 5 and Chrome.
  */
-/* line 230, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 230, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 code,
 kbd,
 pre,
@@ -178,7 +178,7 @@ samp {
 /**
  * Improve readability of pre-formatted text in all browsers.
  */
-/* line 242, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 242, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 pre {
   white-space: pre-wrap;
 }
@@ -186,7 +186,7 @@ pre {
 /**
  *  Set consistent quote types.
  */
-/* line 250, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 250, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
@@ -194,7 +194,7 @@ q {
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-/* line 278, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 278, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 small {
   font-size: 80%;
 }
@@ -202,7 +202,7 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 287, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 287, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -211,12 +211,12 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 294, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 294, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 298, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 298, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 sub {
   bottom: -0.25em;
 }
@@ -228,7 +228,7 @@ sub {
  * 1. Remove border when inside `a` element in IE 8/9.
  * 2. Improves image quality when scaled in IE 7.
  */
-/* line 354, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 354, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 img {
   border: 0;
 }
@@ -236,7 +236,7 @@ img {
 /**
  * Correct overflow displayed oddly in IE 9.
  */
-/* line 365, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 365, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 svg:not(:root) {
   overflow: hidden;
 }
@@ -247,7 +247,7 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 8/9 and Safari 5.
  */
-/* line 377, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 377, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 figure {
   margin: 0;
 }
@@ -258,7 +258,7 @@ figure {
 /**
  * Define consistent border, margin, and padding.
  */
-/* line 389, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 389, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -271,7 +271,7 @@ fieldset {
  * 3. Corrects text not wrapping in Firefox 3.
  * 4. Corrects alignment displayed oddly in IE 6/7.
  */
-/* line 402, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 402, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 legend {
   border: 0;
   /* 1 */
@@ -285,7 +285,7 @@ legend {
  * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
  * 4. Improves appearance and consistency in all browsers.
  */
-/* line 421, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 421, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 button,
 input,
 select,
@@ -302,7 +302,7 @@ textarea {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 437, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 437, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 button,
 input {
   line-height: normal;
@@ -314,7 +314,7 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-/* line 449, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 449, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 button,
 select {
   text-transform: none;
@@ -329,7 +329,7 @@ select {
  * 4. Removes inner spacing in IE 7 without affecting normal text inputs.
  *    Known issue: inner spacing remains in IE 6.
  */
-/* line 466, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 466, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -343,7 +343,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 479, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 479, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -355,7 +355,7 @@ html input[disabled] {
  * 3. Removes excess padding in IE 7.
  *    Known issue: excess padding remains in IE 6.
  */
-/* line 491, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 491, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -369,7 +369,7 @@ input[type="radio"] {
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-/* line 506, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 506, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -383,7 +383,7 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-/* line 519, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 519, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -392,7 +392,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-/* line 528, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 528, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -403,7 +403,7 @@ input::-moz-focus-inner {
  * 1. Remove default vertical scrollbar in IE 8/9.
  * 2. Improve readability and alignment in all browsers.
  */
-/* line 538, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 538, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 textarea {
   overflow: auto;
   /* 1 */
@@ -417,13 +417,13 @@ textarea {
 /**
  * Remove most spacing between table cells.
  */
-/* line 551, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_normalize.scss */
+/* line 551, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 1, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 1, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 blockquote {
   color: #e6e6e6;
   margin: 0;
@@ -432,7 +432,7 @@ blockquote {
 }
 
 /*github.com style (c) Vasily Polovnyov <vast@whiteants.net>*/
-/* line 9, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 9, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre code {
   display: block;
   padding: 0.5em;
@@ -441,7 +441,7 @@ pre code {
   font-size: 18px;
 }
 
-/* line 18, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 18, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .comment,
 pre .template_comment,
 pre .diff .header,
@@ -450,7 +450,7 @@ pre .javadoc {
   font-style: italic;
 }
 
-/* line 29, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 29, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .keyword,
 pre .css .rule .keyword,
 pre .winutils,
@@ -463,14 +463,14 @@ pre .status {
   font-weight: bold;
 }
 
-/* line 35, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 35, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .number,
 pre .hexcolor,
 pre .ruby .constant {
   color: #099;
 }
 
-/* line 41, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 41, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .string,
 pre .tag .value,
 pre .phpdoc,
@@ -478,14 +478,14 @@ pre .tex .formula {
   color: #dd1144;
 }
 
-/* line 45, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 45, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .title,
 pre .id {
   color: #900;
   font-weight: bold;
 }
 
-/* line 52, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 52, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .javascript .title,
 pre .lisp .title,
 pre .clojure .title,
@@ -493,7 +493,7 @@ pre .subst {
   font-weight: normal;
 }
 
-/* line 58, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 58, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .class .title,
 pre .haskell .type,
 pre .vhdl .literal,
@@ -502,7 +502,7 @@ pre .tex .command {
   font-weight: bold;
 }
 
-/* line 65, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 65, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .tag,
 pre .tag .title,
 pre .rules .property,
@@ -511,25 +511,25 @@ pre .django .tag .keyword {
   font-weight: normal;
 }
 
-/* line 71, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 71, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .attribute,
 pre .variable,
 pre .lisp .body {
   color: teal;
 }
 
-/* line 74, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 74, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .regexp {
   color: #009926;
 }
 
-/* line 77, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 77, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .class {
   color: #458;
   font-weight: bold;
 }
 
-/* line 85, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 85, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .symbol,
 pre .ruby .symbol .string,
 pre .lisp .keyword,
@@ -538,14 +538,14 @@ pre .prompt {
   color: #990073;
 }
 
-/* line 90, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 90, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .built_in,
 pre .lisp .title,
 pre .clojure .built_in {
   color: #0086b3;
 }
 
-/* line 97, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 97, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .preprocessor,
 pre .pi,
 pre .doctype,
@@ -555,32 +555,32 @@ pre .cdata {
   font-weight: bold;
 }
 
-/* line 101, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 101, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .deletion {
   background: #ffdddd;
 }
 
-/* line 104, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 104, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .addition {
   background: #ddffdd;
 }
 
-/* line 107, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 107, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .diff .change {
   background: #0086b3;
 }
 
-/* line 110, /Users/rogeruiz/Rokkan/talk-grunt/scss/lib/_github-style.scss */
+/* line 110, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/lib/_github-style.scss */
 pre .chunk {
   color: #aaaaaa;
 }
 
-/* line 1, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
+/* line 1, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_global.scss */
 * {
   box-sizing: border-box;
 }
 
-/* line 5, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
+/* line 5, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_global.scss */
 html, body {
   background-color: #171614;
   color: #fff;
@@ -588,22 +588,22 @@ html, body {
   font-size: 24px;
 }
 
-/* line 12, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
+/* line 12, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_global.scss */
 h1, h2 {
   font-family: 'Open Sans', sans-serif;
 }
 
-/* line 17, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
+/* line 17, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_global.scss */
 a {
   color: #f1f1f1;
 }
-/* line 19, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
+/* line 19, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_global.scss */
 a:hover {
   color: #ffffff;
   text-decoration: none;
 }
 
-/* line 25, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
+/* line 25, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_global.scss */
 .logo {
   display: block;
   width: 150px;
@@ -628,42 +628,42 @@ a:hover {
   -o-transform-origin: center center;
   transform-origin: center center;
 }
-/* line 35, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
+/* line 35, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_global.scss */
 .logo.rokkan {
-  background: white url('/img/logo-rokkan.png?1375467938') 50% 45% no-repeat;
+  background: white url('/img/logo-rokkan.png?1375747038') 50% 45% no-repeat;
 }
-/* line 38, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
+/* line 38, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_global.scss */
 .logo.grunt {
-  background: white url('/img/logo-grunt.png?1375738873') 50% 50% no-repeat;
+  background: white url('/img/logo-grunt.png?1375747038') 50% 50% no-repeat;
 }
-/* line 41, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
+/* line 41, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_global.scss */
 .logo.roger {
-  background: white url('/img/splash-roger.png?1375738795') 50% 50% no-repeat;
+  background: white url('/img/splash-roger.png?1375747038') 50% 50% no-repeat;
 }
 
-/* line 46, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_global.scss */
+/* line 46, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_global.scss */
 .logo-wrapper {
   position: relative;
   width: 25%;
   margin: 0 auto;
 }
-/* line 3, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_mixins.scss */
+/* line 3, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_mixins.scss */
 .logo-wrapper:before, .logo-wrapper:after {
   content: "\0020";
   display: block;
   height: 0;
   overflow: hidden;
 }
-/* line 4, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_mixins.scss */
+/* line 4, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_mixins.scss */
 .logo-wrapper:after {
   clear: both;
 }
-/* line 5, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_mixins.scss */
+/* line 5, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_mixins.scss */
 .logo-wrapper {
   zoom: 1;
 }
 
-/* line 1, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 1, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_slide.scss */
 section {
   opacity: 0;
   background-color: #171614;
@@ -674,12 +674,8 @@ section {
   width: 100%;
   height: 100%;
   padding: 20px;
-  -webkit-transition: all 0.25s ease-in;
-  -moz-transition: all 0.25s ease-in;
-  -o-transition: all 0.25s ease-in;
-  transition: all 0.25s ease-in;
 }
-/* line 12, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 12, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_slide.scss */
 section > .inner {
   z-index: 10;
   position: relative;
@@ -687,17 +683,16 @@ section > .inner {
   padding: 30px;
   margin: 0 auto;
 }
-/* line 19, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 19, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_slide.scss */
 section.tools-are-a-hassle {
   background-color: #fff;
 }
-/* line 21, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
-section.tools-are-a-hassle > .inner {
-  background-color: rgba(255, 255, 255, 0.8);
-  color: #171614;
+/* line 21, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_slide.scss */
+section.tools-are-a-hassle .slide-title {
+  text-shadow: 2px 2px 2px #171614;
 }
 
-/* line 29, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 27, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_slide.scss */
 .gif-bg {
   z-index: 0;
   position: absolute;
@@ -722,17 +717,17 @@ section.tools-are-a-hassle > .inner {
   -o-transform: scale(5);
   transform: scale(5);
 }
-/* line 42, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 40, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_slide.scss */
 .gif-bg.drip {
   -webkit-filter: brightness(1);
   -moz-filter: brightness(1);
   filter: brightness(1);
-  background-image: url('/img/drip.gif?1375372986');
+  background-image: url('/img/drip.gif?1375398144');
 }
-/* line 46, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 44, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_slide.scss */
 .gif-bg.no_time {
   padding: 250px 250px 250px 350px;
-  background-image: url('/img/no_time.gif?1375382708');
+  background-image: url('/img/no_time.gif?1375398144');
   -webkit-filter: brightness(1);
   -moz-filter: brightness(1);
   filter: brightness(1);
@@ -742,51 +737,51 @@ section.tools-are-a-hassle > .inner {
   -o-transform: scale(3);
   transform: scale(3);
 }
-/* line 52, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 50, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_slide.scss */
 .gif-bg.moving_parts {
-  background-image: url('/img/moving_parts.gif?1375372984');
+  background-image: url('/img/moving_parts.gif?1375398144');
 }
-/* line 55, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 53, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_slide.scss */
 .gif-bg.moving_parts_too {
-  background-image: url('/img/moving_parts_too.gif?1375725921');
+  background-image: url('/img/moving_parts_too.gif?1375747038');
 }
-/* line 58, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 56, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_slide.scss */
 .gif-bg.magic_kitty {
-  background-image: url('/img/magic_kitty.gif?1375382652');
+  background-image: url('/img/magic_kitty.gif?1375398144');
 }
-/* line 61, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 59, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_slide.scss */
 .gif-bg.fear_of_change {
-  background-image: url('/img/fear_of_change.gif?1375373854');
+  background-image: url('/img/fear_of_change.gif?1375398144');
 }
-/* line 64, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 62, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_slide.scss */
 .gif-bg.future_tools {
-  background-image: url('/img/future_tools.gif?1375717876');
+  background-image: url('/img/future_tools.gif?1375747038');
 }
-/* line 67, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 65, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_slide.scss */
 .gif-bg.loading {
-  background-image: url('/img/loading.gif?1375372981');
+  background-image: url('/img/loading.gif?1375398144');
 }
-/* line 70, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 68, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_slide.scss */
 .gif-bg.grunt_task {
-  background-image: url('/img/grunt_task.gif?1375727633');
+  background-image: url('/img/grunt_task.gif?1375747038');
   -webkit-filter: brightness(0.35);
   -moz-filter: brightness(0.35);
   filter: brightness(0.35);
 }
-/* line 74, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 72, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_slide.scss */
 .gif-bg.hipster {
-  background-image: url('/img/hipster.gif?1375382636');
+  background-image: url('/img/hipster.gif?1375398144');
   -webkit-filter: brightness(0.75);
   -moz-filter: brightness(0.75);
   filter: brightness(0.75);
 }
-/* line 78, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 76, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_slide.scss */
 .gif-bg.enter_the_matrix {
-  background-image: url('/img/enter_the_matrix.gif?1375373852');
+  background-image: url('/img/enter_the_matrix.gif?1375398144');
 }
-/* line 81, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 79, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_slide.scss */
 .gif-bg.thanks {
-  background-image: url('/img/thanks.gif?1375372989');
+  background-image: url('/img/thanks.gif?1375398144');
   width: 100%;
   height: 100%;
   -webkit-transform: scale(1);
@@ -799,14 +794,14 @@ section.tools-are-a-hassle > .inner {
   filter: brightness(1);
 }
 
-/* line 92, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 90, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_slide.scss */
 .heading-wrapper,
 header {
   font-size: 2em;
   text-align: center;
   text-transform: uppercase;
 }
-/* line 96, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 94, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_slide.scss */
 .heading-wrapper span,
 header span {
   font-family: 'Gentium Book Basic', serif;
@@ -815,7 +810,7 @@ header span {
   display: block;
   margin-bottom: 0;
 }
-/* line 103, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 101, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_slide.scss */
 .heading-wrapper span:before, .heading-wrapper span:after,
 header span:before,
 header span:after {
@@ -823,22 +818,22 @@ header span:after {
   content: '—';
   padding: 15px;
 }
-/* line 117, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 115, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_slide.scss */
 .heading-wrapper .micro,
 header .micro {
   font-size: .45em;
 }
 
-/* line 123, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_slide.scss */
+/* line 121, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_slide.scss */
 .conclusion .logo-wrapper {
   height: 600px;
 }
 
-/* line 2, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_transition.scss */
+/* line 2, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_transition.scss */
 .bespoke-slide {
   overflow: hidden;
 }
-/* line 4, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_transition.scss */
+/* line 4, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_transition.scss */
 .bespoke-slide > .inner {
   -webkit-transform-origin: 50% 50% -50%;
   -moz-transform-origin: 50% 50% -50%;
@@ -847,7 +842,7 @@ header .micro {
   transform-origin: 50% 50% -50%;
 }
 
-/* line 8, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_transition.scss */
+/* line 8, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_transition.scss */
 .bespoke-active {
   opacity: 1;
   -webkit-transition: all 0.8s ease;
@@ -855,7 +850,7 @@ header .micro {
   -o-transition: all 0.8s ease;
   transition: all 0.8s ease;
 }
-/* line 11, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_transition.scss */
+/* line 11, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_transition.scss */
 .bespoke-active > .inner {
   opacity: 1;
   -webkit-transition: all 1.5s ease;
@@ -864,12 +859,12 @@ header .micro {
   transition: all 1.5s ease;
 }
 
-/* line 17, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_transition.scss */
+/* line 17, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_transition.scss */
 .bespoke-inactive > .inner {
   opacity: 0;
 }
 
-/* line 23, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_transition.scss */
+/* line 23, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_transition.scss */
 .bespoke-before > .inner {
   -webkit-transform: rotateY(-180deg);
   -moz-transform: rotateY(-180deg);
@@ -878,7 +873,7 @@ header .micro {
   transform: rotateY(-180deg);
 }
 
-/* line 29, /Users/rogeruiz/Rokkan/talk-grunt/scss/src/_transition.scss */
+/* line 29, /Users/rogeruiz/Work/Rokkan/talk-grunt/scss/src/_transition.scss */
 .bespoke-after > .inner {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
