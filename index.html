@@ -58,17 +58,8 @@
                 <div class="gif-bg no_time"></div>
                 <div class="inner">
                     <header>
-                        <h2 class="slide-title">Tools <span class="descender">require</span> time</h2>
+                        <h2 class="slide-title">Tools <span>require</span> time</h2>
                     </header>
-                    <!-- <ul>
-                        <li>Compass requires <code>compass watch</code> to be running at the root of the working directory.</li>
-                        <li>PHPLint and JSHint require either <code>php -l [file]</code> or <code>jshint [file]</code> to be run each and every time you save your files.</li>
-                        <li>Markdown conversion is made easy by having a markdown parse do things for you, but which one do we use and when?</li>
-                        <li>Compressing image files is great, but we have to remember to do it whenever we add images to the repository.</li>
-                        <li>The latest CLI tool which does XYZ better than ABC and should be run under specific file-change conditions.</li>
-                        <li>That little tool in your belt that you love to use, but hate running because of the carpel tunnel.</li>
-                        <li>Building out assets for easier delivery to clients or production servers.</li>
-                    </ul> -->
                 </div> <!-- /.inner -->
             </section>
             <section class="introducing-grunt">
@@ -98,11 +89,24 @@
                     <header>
                         <h2 class="slide-title">Explaining <span class="micro">a Javascript task runner</span> Grunt</h2>
                     </header>
+                    <h2>Why use a task runner? </h2>
                     <blockquote>
-                        <p>Why use a task runner? In one word: automation. The less work you have to do when performing repetitive tasks like minification, compilation, unit testing, linting, etc, the easier your job becomes. After you&#39;ve configured it, a task running can do most of that mundane work for you—and your team—with basically zero effort. <a href="http://gruntjs.com/" target="_blank">source</a></p>
+                        <p>In one word: automation. The less work you have to do when performing repetitive tasks like minification, compilation, unit testing, linting, etc, the easier your job becomes. After you&#39;ve configured it, a task running can do most of that mundane work for you—and your team—with basically zero effort. <a href="http://gruntjs.com/" target="_blank">source</a></p>
                     </blockquote>
+                    <div class="logo-wrapper">
+                        <span class="logo grunt">Grunt</span>
+                    </div>
+                </div>
+            </section>
+            <section class="explaining-grunt">
+                <div class="gif-bg grunt_task"></div>
+                <div class="inner">
+                    <header>
+                        <h2 class="slide-title">Explaining <span class="micro">a Javascript task runner</span> Grunt</h2>
+                    </header>
+                    <h2>Why use Grunt?</h2>
                     <blockquote>
-                        <p>Why use Grunt? The Grunt ecosystem is huge and it&#39;s growing every day. With literally hundreds of plugins to choose from, you can use Grunt to automate just about anything with a minimum of effort. If someone hasn&#39;t already built what you need, authoring and publishing your own Grunt plugin to npm is a breeze. <a href="http://gruntjs.com/" target="_blank">source</a></p>
+                        <p>The Grunt ecosystem is huge and it&#39;s growing every day. With literally hundreds of plugins to choose from, you can use Grunt to automate just about anything with a minimum of effort. If someone hasn&#39;t already built what you need, authoring and publishing your own Grunt plugin to npm is a breeze. <a href="http://gruntjs.com/" target="_blank">source</a></p>
                     </blockquote>
                     <div class="logo-wrapper">
                         <span class="logo grunt">Grunt</span>
@@ -151,14 +155,14 @@
                     <!-- <div class="logo-wrapper">
                         <span class="logo rokkan">Rokkan</span>
                     </div> -->
-                    <p>The best part of using Grunt is the community support behind it. There are tons of plugins that have already been contributed to the project. Most of them are interfaces for tools we already use:</p>
-                    <ul>
+                    <p>The best part of using Grunt is the community support behind it. There are tons of plugins that have already been contributed to the project. Most of them are interfaces for tools we already use.</p>
+                    <!-- <ul>
                         <li><a href="https://npmjs.org/package/grunt-contrib-compass" target="_blank">Compass</a></li>
                         <li><a href="https://npmjs.org/package/grunt-contrib-imagemin" target="_blank">Imagemin</a></li>
                         <li><a href="https://npmjs.org/package/grunt-contrib-jshint" target="_blank">JSHint</a></li>
                         <li><a href="https://npmjs.org/package/grunt-contrib-uglify" target="_blank">Uglify</a></li>
                         <li><a href="http://gruntjs.com/plugins" target="_blank">A lot more</a></li>
-                    </ul>
+                    </ul> -->
                     <!-- <p>These tools do what you already know them to do. And are pretty simple to set up within a <code>Gruntfile.js</code>.</p> -->
                 </div> <!-- /.inner -->
             </section>
@@ -189,6 +193,80 @@ compass: {
   }
 }
 // <span class="keyword">...</span></code></pre>
+                </div>
+            </section>
+            <section class="rokkan-workflow">
+                <div class="gif-bg moving_parts_too"></div>
+                <div class="inner">
+                    <p>Here&#39;s Uglify for example:</p>
+<pre><code class="lang-js">// <span class="keyword">...</span>
+uglify: {
+    my_target : {
+        files: {
+            <span class="string">'js/publish/age-gate.js'</span> : [<span class="string">'js/age-gate.js'</span>],
+            <span class="string">'js/publish/plugins.js'</span> : [<span class="string">'js/plugins.js'</span>],
+            <span class="string">'js/publish/main.js'</span> : [<span class="string">'js/main.js'</span>]
+        }
+    }
+},
+// <span class="keyword">...</span></code></pre>
+                </div>
+            </section>
+            <section class="rokkan-workflow">
+                <div class="gif-bg moving_parts_too"></div>
+                <div class="inner">
+                    <p>Here&#39;s Watch for example:</p>
+<pre><code class="lang-js">//<span class="keyword">...</span>
+watch: {
+    scripts: {
+        files: [<span class="string">'web/js/lib/*.js'</span>, <span class="string">'web/js/src/*.js'</span>],
+        tasks: [<span class="string">'requirejs:dev'</span>]
+    },
+    stylesheets: {
+        files: [<span class="string">'web/scss/lib/*.scss'</span>, <span class="string">'web/scss/src/*.scss'</span>],
+        tasks: [<span class="string">'compass:dev'</span>]
+    },
+    docs: {
+        files: [<span class="string">'*.markdown'</span>, <span class="string">'docs/src/*.markdown'</span>],
+        tasks: [<span class="string">'markdown'</span>]
+    },
+    qunit: {
+        files: [<span class="string">'tests/**/*.html'</span>, <span class="string">'tests/**/*.js'</span>, <span class="string">'web/src/app.js'</span>],
+        tasks: [<span class="string">'qunit'</span>]
+    },
+    phpunit: {
+        files: [<span class="string">'tests/**/*.php'</span>],
+        tasks: [<span class="string">'exec:phpunit'</span>]
+    }
+}
+//<span class="keyword">...</span></code></pre>
+                </div>
+            </section>
+            <section class="rokkan-workflow">
+                <div class="gif-bg moving_parts_too"></div>
+                <div class="inner">
+                    <p>Here&#39;s JSHint for example:</p>
+<pre><code class="lang-js">// <span class="keyword">...</span>
+jshint: {
+    files: [<span class="string">'Gruntfile.js'</span>, <span class="string">'web/js/src/*.js'</span>, <span class="string">'tests/tests.js'</span>],
+    options: {
+        ignores: [<span class="string">'web/js/lib/*.js'</span>, <span class="string">'web/js/app.js'</span>]
+    }
+}
+// <span class="keyword">...</span></code></pre>
+                </div>
+            </section>
+            <section class="rokkan-workflow">
+                <div class="gif-bg moving_parts_too"></div>
+                <div class="inner">
+                    <p>Here&#39;s PHPUnit for example:</p>
+<pre><code class="lang-js">//<span class="keyword">...</span>
+exec: {
+    phpunit: {
+        cmd: <span class="string">'phpunit tests'</span>
+    }
+},
+//<span class="keyword">...</span></code></pre>
                 </div>
             </section>
             <section class="grunt-examples">

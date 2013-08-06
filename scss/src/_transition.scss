@@ -1,32 +1,33 @@
 .bespoke-parent {}
 .bespoke-slide {
-    overflow: hidden;
+    @include transform-origin(50%, 50%, -500px);
     > .inner {
-        @include transform-origin(50%, 50%, -50%);
+        @include transform-origin(50%, 50%, 500px);
     }
 }
 .bespoke-active {
     opacity: 1;
-    @include transition(all .8s ease);
+    @include transition(all 0.8s ease);
     > .inner {
-        opacity: 1;
-        @include transition(all 1.5s ease);
+        @include transition(all 1.8s ease);
     }
 }
 .bespoke-inactive {
     > .inner {
-        opacity: 0;
     }
 }
 
 .bespoke-before {
+    @include transform(rotateY(-90deg));
     > .inner {
-        @include transform(rotateY(-180deg));
+        @include transform(rotateX(90deg));
+        
     }
 }
 
 .bespoke-after {
+    @include transform(rotateY(90deg));
     > .inner {
-        @include transform(rotateY(180deg));
+        @include transform(rotateX(-90deg));
     }
 }
